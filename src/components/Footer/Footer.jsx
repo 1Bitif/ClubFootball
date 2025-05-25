@@ -1,86 +1,153 @@
 import {
-  FacebookIcon,
+  Facebook,
   Globe,
-  InstagramIcon,
-  LinkedinIcon,
+  Instagram,
+  Linkedin,
   Twitter,
   Youtube,
-  YoutubeIcon,
 } from "lucide-react";
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const socialLinks = [
+    { icon: <Youtube size={20} />, name: "YouTube" },
+    { icon: <Instagram size={20} />, name: "Instagram" },
+    { icon: <Twitter size={20} />, name: "Twitter" },
+    { icon: <Facebook size={20} />, name: "Facebook" },
+    { icon: <Linkedin size={20} />, name: "LinkedIn" },
+  ];
+
+  const footerLinks = [
+    "ACCESSIBILITY",
+    "Fair Processing Notice",
+    "Cookie Policy",
+    "Modern Slavery Statement",
+    "Privacy Policy",
+    "Terms of Use",
+    "Contact Us",
+    "Sitemap",
+  ];
+
   return (
-    <div className="flex flex-col  justify-evenly items-center bg-[#001838] py-6 px-16 ">
-      <div className=" flex gap-6 items-center border-b border-white/40"> 
-      <div className="flex justify-center items-center py-4 w-[200px]">
-        <img src="./images/logo.svg" alt="Logo" className="" />
-      </div>
-      <div className="flex flex-col justify-center items-center w-full   gap-4">
-        <div className="flex gap-4 justify-center items-center w-full ">
-          <div className="border-r px-6 border-white/40">
-            <span className="flex items-center gap-2 p-2 rounded-full text-white bg-[#154284] hover:text-[#154284] hover:bg-[#3bd6ff] transition duration-300">
-              <Globe />
-              En
-            </span>
-          </div>
-          <div className="flex items-center gap-4 ">
-            <span className="flex items-center gap-2 p-2 rounded-full text-[#3bd6ff] bg-[#154284] hover:text-[#154284] hover:bg-[#3bd6ff] transition duration-300">
-              <YoutubeIcon size={28} />
-            </span>
-            <span className="flex items-center gap-2 p-2 rounded-full text-[#3bd6ff] bg-[#154284] hover:text-[#154284] hover:bg-[#3bd6ff] transition duration-300">
-              <InstagramIcon size={28} />
-            </span>
-            <span className="flex items-center gap-2 p-2 rounded-full text-[#3bd6ff] bg-[#154284] hover:text-[#154284] hover:bg-[#3bd6ff] transition duration-300">
-              <svg
-                width="28"
-                height="28"
-                viewBox="0 0 1200 1227"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+    <motion.footer 
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+      className="bg-[#001838] text-white pt-12 px-4 sm:px-8 lg:px-16"
+    >
+      <div className="max-w-7xl mx-auto">
+        {/* Top Section */}
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 pb-8 border-b border-white/20">
+          {/* Logo */}
+          <motion.div 
+            whileHover={{ scale: 1.05 }}
+            className="w-40 md:w-48"
+          >
+            <img 
+              src="./images/logo.svg" 
+              alt="Manchester City Logo" 
+              className="w-full h-auto" 
+            />
+          </motion.div>
+
+          {/* Language and Social */}
+          <div className="flex flex-col items-center gap-6 w-full lg:w-auto">
+            <div className="flex flex-col md:flex-row items-center gap-6 w-full justify-between">
+              {/* Language Selector */}
+              <motion.div 
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center gap-2 p-2 rounded-full bg-[#154284] hover:bg-[#3bd6ff] hover:text-[#154284] transition-all duration-300 cursor-pointer"
               >
-                <g clipPath="url(#clip0_228_1261)">
-                  <path
-                    d="M714.2 519.3L1160.9 0H1055L667.1 450.9L357.3 0H0L468.5 681.8L0 1226.4H105.9L515.5 750.2L842.7 1226.4H1200L714.2 519.3ZM569.2 687.8L521.7 619.9L144 79.7H306.6L611.4 515.7L658.9 583.6L1055.1 1150.3H892.5L569.2 687.8Z"
-                    fill="currentColor"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_228_1261">
-                    <rect width="1200" height="1227" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </span>
-            <span className="flex items-center gap-2 p-2 rounded-full text-[#3bd6ff] bg-[#154284] hover:text-[#154284] hover:bg-[#3bd6ff] transition duration-300">
-              <FacebookIcon size={28} />
-            </span>
-            <span className="flex items-center gap-2 p-2 rounded-full text-[#3bd6ff] bg-[#154284] hover:text-[#154284] hover:bg-[#3bd6ff] transition duration-300">
-              <LinkedinIcon size={28} />
-            </span>
+                <Globe size={18} />
+                <span className="font-medium">English</span>
+              </motion.div>
+
+              {/* Social Links */}
+              <div className="flex items-center gap-4">
+                {socialLinks.map((social, index) => (
+                  <motion.a
+                    key={social.name}
+                    href="#"
+                    aria-label={social.name}
+                    className="p-2 rounded-full bg-[#154284] text-[#3bd6ff] hover:bg-[#3bd6ff] hover:text-[#154284] transition-all duration-300"
+                    whileHover={{ y: -3 }}
+                    whileTap={{ scale: 0.9 }}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                  >
+                    {social.icon}
+                  </motion.a>
+                ))}
+              </div>
+            </div>
+
+            {/* Footer Links */}
+            <motion.div 
+              className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full text-center"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+            >
+              {footerLinks.map((link) => (
+                <motion.a
+                  key={link}
+                  href="#"
+                  className="text-sm md:text-base font-medium hover:underline hover:text-[#3bd6ff] transition-colors duration-200"
+                  whileHover={{ x: 3 }}
+                >
+                  {link}
+                </motion.a>
+              ))}
+            </motion.div>
           </div>
         </div>
-        <div className="flex flex-wrap font-bold text-xl text-white w-full items-center uppercase justify-center gap-4">
-          <h1 className="hover:underline cursor-pointer">ACCESSIBILITY</h1>
-          <h1 className="hover:underline cursor-pointer">Fair Processing Notice</h1>
-          <h1 className="hover:underline cursor-pointer">Cookie Policy</h1>
-          <h1 className="hover:underline cursor-pointer">Modern Slavery Statement</h1>
-          <h1 className="hover:underline cursor-pointer">Privacy Policy</h1>
-          <h1 className="hover:underline cursor-pointer">Terms of Use</h1>
-          <h1 className="hover:underline cursor-pointer">Contact Us</h1>
-          <h1 className="hover:underline cursor-pointer">Sitemap</h1>
+
+        {/* Bottom Section */}
+        <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-6 py-8">
+          {/* Copyright */}
+          <motion.p 
+            className="text-sm md:text-base"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4 }}
+          >
+            &copy; Manchester City FC Ltd {currentYear}
+          </motion.p>
+
+          {/* Fan Support */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4 }}
+          >
+            <NavLink 
+              to="#" 
+              className="text-sm md:text-base font-medium underline hover:no-underline hover:text-[#3bd6ff] transition-colors duration-200"
+            >
+              Fan Support
+            </NavLink>
+          </motion.div>
+
+          {/* Footer Image */}
+          <motion.div 
+            className="w-40 md:w-48"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+          >
+            <img 
+              src="./images/footerImage.png" 
+              alt="Manchester City Partners" 
+              className="w-full h-auto" 
+            />
+          </motion.div>
         </div>
       </div>
-      </div>
-      <div className="flex justify-between items-center w-full py-4">
-        <NavLink  to="" className="text-xl text-white focus:outline-none underline hover:no-underline">Fan Support</NavLink>
-        <div className="flex w-[370px] ">
-        <img src="./images/footerImage.png" alt="image" className="" />
-      </div>
-      <h1 className="text-lg text-white">Manchester City FC Ltd {currentYear}</h1>
-      </div>
-    </div>
+    </motion.footer>
   );
 };
