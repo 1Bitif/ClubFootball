@@ -3,6 +3,10 @@ import './App.css'
 import { Home } from './pages/Home/Home'
 import { Navbar } from './components/Navbar/Navbar'
 import { Footer } from './components/Footer/Footer'
+import { Club } from './components/Club/Club'
+import { Players } from './components/Players/Players'
+import { History } from './components/History/History'
+import { DetailsPlayer } from './components/DetailsPlayer/DetailsPlayer'
 
 function App() {
 
@@ -12,6 +16,10 @@ function App() {
       <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/club' element={<Club />} />
+          <Route path='/players' element={<Players />} />
+          <Route path='/history' element={<History />} />
+          <Route path='/detailsPlayer/:id' element={<DetailsPlayer />} />
         </Routes>
       <Footer />
       </BrowserRouter>
