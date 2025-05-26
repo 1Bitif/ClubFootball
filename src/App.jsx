@@ -7,12 +7,14 @@ import { Club } from './components/Club/Club'
 import { Players } from './components/Players/Players'
 import { History } from './components/History/History'
 import { DetailsPlayer } from './components/DetailsPlayer/DetailsPlayer'
+import { ScrollToTop } from './utils/ScrollTop/ScrollTop'
 
 function App() {
 
   return (
     <>
       <BrowserRouter>
+      <ScrollToTop />
       <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />

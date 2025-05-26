@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Trophy, Users, Calendar, Shirt, MapPin, Award, Star, Globe } from 'lucide-react';
+import { MapComponent } from '../MapComponent/MapComponent';
 
 export const Club = () => {
   // Animation variants
@@ -489,6 +490,7 @@ export const Club = () => {
                 className="absolute -bottom-6 -left-6 w-16 h-16 bg-emerald-400 rounded-2xl shadow-lg opacity-70"
               />
             </motion.div>
+            {/* <MapComponent /> */}
           </motion.div>
         </div>
       </section>
