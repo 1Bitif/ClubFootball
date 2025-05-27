@@ -463,7 +463,7 @@ export const Club = () => {
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent"></div>
               </motion.div>
-              
+              {/* <MapComponent  /> */}
               {/* Floating elements */}
               <motion.div
                 animate={{

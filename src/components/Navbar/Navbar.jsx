@@ -79,7 +79,7 @@ export const Navbar = () => {
           <span className="font-bold text-white pl-2 hover:underline text-xs sm:text-sm">I WANT TO BE PREMIUM</span>
         </motion.div>
         
-        <div className="flex items-center gap-4">
+        <NavLink to="login" className="flex items-center gap-4">
           <motion.div 
             whileHover={{ scale: 1.05 }}
             className="flex gap-2 text-white items-center cursor-pointer group"
@@ -92,7 +92,7 @@ export const Navbar = () => {
             </motion.span>
             <p className="hover:underline transition-all duration-200 text-sm">Login</p>
           </motion.div>
-        </div>
+        </NavLink>
       </div>
 
       {/* Main Navbar */}

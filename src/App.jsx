@@ -8,6 +8,8 @@ import { Players } from './components/Players/Players'
 import { History } from './components/History/History'
 import { DetailsPlayer } from './components/DetailsPlayer/DetailsPlayer'
 import { ScrollToTop } from './utils/ScrollTop/ScrollTop'
+import { Contact } from './components/Contact/Contact'
+import { Login } from './components/Login/Login'
 
 function App() {
 
@@ -22,6 +24,8 @@ function App() {
           <Route path='/players' element={<Players />} />
           <Route path='/history' element={<History />} />
           <Route path='/detailsPlayer/:id' element={<DetailsPlayer />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/login' element={<Login />} />
         </Routes>
       <Footer />
       </BrowserRouter>

@@ -23,25 +23,25 @@ export const Players = () => {
 
 
     // Filter players based on active filter
-   const filteredPlayers = players.filter(player => {
-    switch (activeFilter) {
-        case 'All':
-            return true;
-        case 'Goalkeepers':
-            return player.position === 'Goalkeeper'; // Exact match for your data
-        case 'Defenders':
-            // Matches both 'Defender' and specific defensive positions
-            return ['Defender', 'Defender central', 'Défenseur', 'Défenseur droit', 'Défenseur central'].includes(player.position);
-        case 'Midfielders':
-            // Matches all midfield variations in your data
-            return ['Midfielder', 'Milieu offensif', 'Milieu défensif', 'Milieu central'].includes(player.position);
-        case 'Forwards':
-            // Matches all forward/attacker positions
-            return ['Forward', 'Attaquant', 'Ailier gauche', 'Ailier droit'].includes(player.position);
-        default:
-            return true;
-    }
-});
+    const filteredPlayers = players.filter(player => {
+        switch (activeFilter) {
+            case 'All':
+                return true;
+            case 'Goalkeepers':
+                return player.position === 'Goalkeeper'; // Exact match for your data
+            case 'Defenders':
+                // Matches both 'Defender' and specific defensive positions
+                return ['Defender', 'Defender central', 'Défenseur', 'Défenseur droit', 'Défenseur central'].includes(player.position);
+            case 'Midfielders':
+                // Matches all midfield variations in your data
+                return ['Midfielder', 'Milieu offensif', 'Milieu défensif', 'Milieu central'].includes(player.position);
+            case 'Forwards':
+                // Matches all forward/attacker positions
+                return ['Forward', 'Attaquant', 'Ailier gauche', 'Ailier droit'].includes(player.position);
+            default:
+                return true;
+        }
+    });
 
     return (
         <main className="bg-gray-50 min-h-screen mt-16">
@@ -75,33 +75,35 @@ export const Players = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {players.filter(player => player.featured).map(player => (
-                            <div
-                                key={player.id}
-                                className="group bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
-                            >
-                                <div className="relative h-64 bg-gradient-to-b from-sky-900 to-sky-700">
-                                    <div className="w-full h-full bg-gradient-to-b from-transparent to-black/30 flex items-center justify-center">
-                                        <Shirt className="w-20 h-20 text-white/20" />
-                                    </div>
-                                    <div className="absolute bottom-4 left-4 bg-white text-sky-900 px-3 py-1 text-lg font-bold rounded-lg shadow-lg">
-                                        #{player.jerseyNumber}
-                                    </div>
-                                </div>
-                                <div className="p-6">
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2">{player.name}</h3>
-                                    <p className="text-sky-700 font-semibold mb-4">{player.position}</p>
-                                    <div className="space-y-2">
-                                        <div className="flex items-center gap-3 text-gray-600">
-                                            <Flag size={16} className="text-sky-600" />
-                                            <span className="text-sm">{player.nationality}</span>
+                            <NavLink to={`/detailsPlayer/${player.id}`} key={player.id} className="block">
+                                <div
+                                    key={player.id}
+                                    className="group bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                                >
+                                    <div className="relative h-64 bg-gradient-to-b from-sky-900 to-sky-700">
+                                        <div className="w-full h-full bg-gradient-to-b from-transparent to-black/30 flex items-center justify-center">
+                                            {!player?.imageUrl ? (<Shirt className="w-16 h-16 text-white/20" />) : (<img src={player?.imageUrl} className='bg-cover w-64 ' alt="image" />)}
                                         </div>
-                                        <div className="flex items-center gap-3 text-gray-600">
-                                            <Calendar size={16} className="text-sky-600" />
-                                            <span className="text-sm">{player.age} years</span>
+                                        <div className="absolute bottom-4 left-4 bg-white text-sky-900 px-3 py-1 text-lg font-bold rounded-lg shadow-lg">
+                                            #{player.jerseyNumber}
                                         </div>
                                     </div>
+                                    <div className="p-6">
+                                        <h3 className="text-xl font-bold text-gray-900 mb-2">{player.name}</h3>
+                                        <p className="text-sky-700 font-semibold mb-4">{player.position}</p>
+                                        <div className="space-y-2">
+                                            <div className="flex items-center gap-3 text-gray-600">
+                                                <Flag size={16} className="text-sky-600" />
+                                                <span className="text-sm">{player.nationality}</span>
+                                            </div>
+                                            <div className="flex items-center gap-3 text-gray-600">
+                                                <Calendar size={16} className="text-sky-600" />
+                                                <span className="text-sm">{player.age} years</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            </NavLink>
                         ))}
                     </div>
                 </div>
@@ -145,7 +147,9 @@ export const Players = () => {
                                 <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full">
                                     <div className="relative h-48 bg-gradient-to-b from-sky-900 to-sky-700">
                                         <div className="w-full h-full bg-gradient-to-b from-transparent to-black/20 flex items-center justify-center">
-                                            <Shirt className="w-16 h-16 text-white/20" />
+                                            {/* <Shirt className="w-16 h-16 text-white/20" /> */}
+                                            {!player?.imageUrl ? (<Shirt className="w-16 h-16 text-white/20" />) : (<img src={player?.imageUrl} className='bg-cover w-48 ' alt="image" />)}
+
                                         </div>
                                         <div className="absolute top-4 right-4 bg-white text-sky-900 w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm shadow-lg">
                                             #{player.jerseyNumber}
