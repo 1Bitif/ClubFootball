@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Trophy, Users, Calendar, Shirt, MapPin, Award, Star, Globe, ChevronDown } from 'lucide-react';
 import { MapComponent } from '../MapComponent/MapComponent';
 
-export const Club = ({ scrollToAbout , aboutRef }) => {
+export const Club = ({ scrollToAbout, aboutRef }) => {
   // Animation variants
   const container = {
     hidden: { opacity: 0 },
@@ -46,38 +46,36 @@ export const Club = ({ scrollToAbout , aboutRef }) => {
 
   // Club honors data with enhanced styling
   const honors = [
-    { 
-      title: 'Premier League', 
-      count: 9, 
-      years: ['2012', '2014', '2018', '2019', '2021', '2022', '2023'],
-    //   years: '2012, 2014, 2018, 2019, 2021, 2022, 2023',
-      icon: <Trophy className="w-5 h-5" />,
-      gradient: 'from-blue-600 to-blue-800'
-    },
-    { 
-      title: 'UEFA Champions League', 
-      count: 1, 
-      years: ['2023'],
-      icon: <Star className="w-5 h-5" />,
-      gradient: 'from-purple-600 to-purple-800'
-    },
-    { 
-      title: 'FA Cup', 
-      count: 7, 
-      years: ['1904', '1934', '1956', '1969', '2011', '2019', '2023'],
-    //   years: '1904, 1934, 1956, 1969, 2011, 2019, 2023',
-      icon: <Award className="w-5 h-5" />,
-      gradient: 'from-emerald-600 to-emerald-800'
-    },
-    { 
-      title: 'EFL Cup', 
-      count: 8, 
-      years: ['1970', '1976', '2014', '2016', '2018', '2019', '2020', '2021'],
-    //   years: ['1970, 1976, 2014, 2016, 2018, 2019, 2020, 2021'],
-      icon: <Trophy className="w-5 h-5" />,
-      gradient: 'from-amber-600 to-amber-800'
-    }
-  ];
+  {
+    title: 'Premier League',
+    count: 9,
+    years: ['1937', '1968', '2012', '2014', '2018', '2019', '2021', '2022', '2023'],
+    icon: <Trophy className="w-5 h-5" />,
+    gradient: 'from-blue-600 to-blue-800'
+  },
+  {
+    title: 'UEFA Champions League',
+    count: 1,
+    years: ['2023'],
+    icon: <Star className="w-5 h-5" />,
+    gradient: 'from-purple-600 to-purple-800'
+  },
+  {
+    title: 'FA Cup',
+    count: 7,
+    years: ['1904', '1934', '1956', '1969', '2011', '2019', '2023'],
+    icon: <Award className="w-5 h-5" />,
+    gradient: 'from-emerald-600 to-emerald-800'
+  },
+  {
+    title: 'EFL Cup',
+    count: 8,
+    years: ['1970', '1976', '2014', '2016', '2018', '2019', '2020', '2021'],
+    icon: <Trophy className="w-5 h-5" />,
+    gradient: 'from-amber-600 to-amber-800'
+  }
+];
+
 
   const achievements = [
     { label: 'Consecutive Premier League Titles', value: '4', period: '2017-2021' },
@@ -96,21 +94,28 @@ export const Club = ({ scrollToAbout , aboutRef }) => {
     >
       {/* Hero Section - Enhanced */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 overflow-hidden flex items-center">
-        <motion.div 
+        {/* Background image with overlay */}
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
-          className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-slate-900/40 to-black/60"
-        />
-        
+          className="absolute inset-0"
+        >
+          <img
+            src="./images/TrebleWinners.webp"
+            className="w-full h-full object-cover absolute inset-0 opacity-30"
+            alt="Manchester City Treble Winners"
+          />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-slate-900/40 to-black/60" />
+        </motion.div>
+
         {/* Animated background elements */}
-        <motion.div 
+        <motion.div
           className="absolute inset-0"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
         >
-        <img src="./images/TrebleWinners.webp" className='w-full opacity-30' alt="" />
           <motion.div
             animate={{
               x: [0, 100, 0],
@@ -165,7 +170,7 @@ export const Club = ({ scrollToAbout , aboutRef }) => {
               <span className="text-blue-100 font-medium">Premier League Champions</span>
             </motion.div>
           </motion.div>
-          
+
           <motion.h1
             variants={slideUp}
             transition={{ delay: 0.3 }}
@@ -175,14 +180,14 @@ export const Club = ({ scrollToAbout , aboutRef }) => {
               Manchester City
             </span>
           </motion.h1>
-          
+
           <motion.div
             variants={slideUp}
             transition={{ delay: 0.4 }}
             className="max-w-4xl mx-auto mb-12"
           >
             <p className="text-xl md:text-2xl text-blue-100 leading-relaxed font-light">
-              A global football powerhouse with unmatched excellence, innovation, and a commitment 
+              A global football powerhouse with unmatched excellence, innovation, and a commitment
               to beautiful football. Home to world-class talent and a legacy of triumph.
             </p>
           </motion.div>
@@ -217,7 +222,7 @@ export const Club = ({ scrollToAbout , aboutRef }) => {
           </motion.div>
         </div>
         {/* Scroll indicator */}
-        <motion.div 
+        <motion.div
           className='absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 cursor-pointer'
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
@@ -245,7 +250,7 @@ export const Club = ({ scrollToAbout , aboutRef }) => {
               Defining <span className="text-blue-600">Excellence</span>
             </motion.h2>
             <motion.p variants={item} className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Our achievements speak volumes about our commitment to excellence and our position 
+              Our achievements speak volumes about our commitment to excellence and our position
               among the world's elite football clubs.
             </motion.p>
           </motion.div>
@@ -323,7 +328,7 @@ export const Club = ({ scrollToAbout , aboutRef }) => {
               Champions <span className="text-amber-400">Legacy</span>
             </motion.h2>
             <motion.p variants={item} className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              A distinguished collection of trophies that represents decades of dedication, 
+              A distinguished collection of trophies that represents decades of dedication,
               skill, and unwavering pursuit of excellence.
             </motion.p>
           </motion.div>
@@ -362,17 +367,17 @@ export const Club = ({ scrollToAbout , aboutRef }) => {
                     <p className="text-gray-400 text-sm">Titles</p>
                   </div>
                 </div>
-                
+
                 <motion.div
                   whileHover={{ scale: 1.02 }}
                   className="bg-white/5 p-4 rounded-xl border border-white/10"
                 >
                   <p className="text-gray-300 text-sm font-medium mb-1">Winning Years</p>
-                 <div className="flex flex-wrap gap-2">
-                     {honor?.years?.map((year, idx) => (
-                      <span  className="bg-transparent rounded-full px-4 py-2 border border-white/10 text-white">{year}</span>
-                  ))}
-                 </div>
+                  <div className="flex flex-wrap gap-2">
+                    {honor?.years?.map((year, idx) => (
+                      <span className="bg-transparent rounded-full px-4 py-2 border border-white/10 text-white">{year}</span>
+                    ))}
+                  </div>
                 </motion.div>
               </motion.div>
             ))}
@@ -395,14 +400,14 @@ export const Club = ({ scrollToAbout , aboutRef }) => {
                 <MapPin className="w-4 h-4" />
                 Our Home
               </motion.div>
-              
+
               <motion.h2 variants={item} className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Etihad Stadium
               </motion.h2>
-              
+
               <motion.p variants={item} className="text-xl text-gray-600 mb-8 leading-relaxed">
-                A architectural masterpiece and our fortress since 2003. The Etihad Stadium 
-                represents the pinnacle of modern football venue design, offering an unparalleled 
+                A architectural masterpiece and our fortress since 2003. The Etihad Stadium
+                represents the pinnacle of modern football venue design, offering an unparalleled
                 matchday experience for over 53,000 passionate supporters.
               </motion.p>
 
@@ -451,7 +456,7 @@ export const Club = ({ scrollToAbout , aboutRef }) => {
               </motion.div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               variants={item}
               className="relative"
             >
@@ -518,11 +523,11 @@ export const Club = ({ scrollToAbout , aboutRef }) => {
               Join the <span className="text-blue-400">City Family</span>
             </motion.h2>
             <motion.p variants={item} className="text-xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
-              Become part of a global community that shares the passion for beautiful football, 
-              excellence, and the Manchester City legacy. Experience the pride, the victories, 
+              Become part of a global community that shares the passion for beautiful football,
+              excellence, and the Manchester City legacy. Experience the pride, the victories,
               and the unforgettable moments together.
             </motion.p>
-            
+
             <motion.div
               variants={container}
               className="flex flex-col sm:flex-row gap-6 justify-center"

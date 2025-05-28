@@ -44,13 +44,13 @@ export const Navbar = () => {
   };
 
   const mobileMenuVariants = {
-    hidden: { 
-      opacity: 0, 
+    hidden: {
+      opacity: 0,
       height: 0,
       transition: { duration: 0.3 }
     },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       height: "auto",
       transition: { duration: 0.3 }
     }
@@ -62,7 +62,7 @@ export const Navbar = () => {
   };
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 100 }}
@@ -70,7 +70,7 @@ export const Navbar = () => {
     >
       {/* Top Bar - Hide on small screens */}
       <div className="hidden sm:flex justify-between items-center bg-[#001838] px-4 py-2 w-full">
-        <motion.div 
+        <motion.div
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           className="rounded-full px-2 sm:px-4 bg-gradient-to-l from-[#1b5baf] to-[#98c5e9] py-1 flex items-center cursor-pointer"
@@ -78,13 +78,13 @@ export const Navbar = () => {
           <p className="text-xs sm:text-sm">Become Culer Premium and enjoy all its advantages</p>
           <span className="font-bold text-white pl-2 hover:underline text-xs sm:text-sm">I WANT TO BE PREMIUM</span>
         </motion.div>
-        
+
         <NavLink to="login" className="flex items-center gap-4">
-          <motion.div 
+          <motion.div
             whileHover={{ scale: 1.05 }}
             className="flex gap-2 text-white items-center cursor-pointer group"
           >
-            <motion.span 
+            <motion.span
               whileHover={{ rotate: 10 }}
               className="bg-[#154284] p-1 rounded-full text-white group-hover:bg-[#1a5cb3] transition-colors duration-200"
             >
@@ -96,7 +96,7 @@ export const Navbar = () => {
       </div>
 
       {/* Main Navbar */}
-      <motion.div 
+      <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="show"
@@ -106,25 +106,25 @@ export const Navbar = () => {
           {/* Logo */}
           <motion.div variants={itemVariants}>
             <NavLink to="/" className="hover:opacity-90 transition-opacity duration-200">
-              <motion.img 
+              <motion.img
                 whileHover={{ rotate: [0, -5, 5, 0] }}
-                src="./images/logo.svg" 
-                alt="Logo" 
-                className="w-12 sm:w-14 lg:w-16" 
+                src="./images/logo.svg"
+                alt="Logo"
+                className="w-12 sm:w-14 lg:w-16"
               />
             </NavLink>
           </motion.div>
 
           {/* Desktop Navigation Links */}
-          <motion.nav 
+          <motion.nav
             variants={containerVariants}
             className="hidden lg:flex items-center gap-6"
           >
             {["Club", "Players", "History", "Contact"].map((item) => (
               <motion.div key={item} variants={itemVariants}>
-                <NavLink 
-                  to={`/${item.toLowerCase()}`} 
-                  className={({ isActive }) => 
+                <NavLink
+                  to={`/${item.toLowerCase()}`}
+                  className={({ isActive }) =>
                     `relative px-1 py-2 ${isActive ? "text-[#001838]" : "text-[#001838]/80"}`
                   }
                 >
@@ -142,16 +142,19 @@ export const Navbar = () => {
 
           {/* Mobile Login Button - Show only on small screens */}
           <div className="sm:hidden ml-auto mr-4">
-            <motion.div 
+            <motion.div
               whileHover={{ scale: 1.05 }}
               className="flex gap-2 text-[#001838] items-center cursor-pointer group"
             >
-              <motion.span 
-                whileHover={{ rotate: 10 }}
-                className="bg-[#154284] p-1 rounded-full text-white group-hover:bg-[#1a5cb3] transition-colors duration-200"
-              >
-                <User2Icon size={16} />
-              </motion.span>
+              <NavLink to="login" className="flex items-center gap-4">
+
+                <motion.span
+                  whileHover={{ rotate: 10 }}
+                  className="bg-[#154284] p-1 rounded-full text-white group-hover:bg-[#1a5cb3] transition-colors duration-200"
+                >
+                  <User2Icon size={16} />
+                </motion.span>
+              </NavLink>
             </motion.div>
           </div>
         </div>
@@ -160,7 +163,7 @@ export const Navbar = () => {
         <motion.div variants={itemVariants} className="hidden lg:flex items-center gap-6">
           {/* Language Selector */}
           <div className="relative">
-            <motion.div 
+            <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center gap-1 cursor-pointer hover:text-[#154284] transition-colors duration-200"
@@ -174,7 +177,7 @@ export const Navbar = () => {
                 <ChevronDown size={18} />
               </motion.div>
             </motion.div>
-            
+
             <AnimatePresence>
               {openLang && (
                 <motion.div
@@ -264,14 +267,13 @@ export const Navbar = () => {
                     animate="visible"
                     transition={{ delay: index * 0.1 }}
                   >
-                    <NavLink 
+                    <NavLink
                       to={`/${item.toLowerCase()}`}
                       onClick={closeMobileMenu}
-                      className={({ isActive }) => 
-                        `block px-4 py-3 rounded-lg transition-colors duration-200 ${
-                          isActive 
-                            ? "bg-[#001838] text-white" 
-                            : "text-[#001838] hover:bg-[#001838]/10"
+                      className={({ isActive }) =>
+                        `block px-4 py-3 rounded-lg transition-colors duration-200 ${isActive
+                          ? "bg-[#001838] text-white"
+                          : "text-[#001838] hover:bg-[#001838]/10"
                         }`
                       }
                     >
@@ -290,7 +292,7 @@ export const Navbar = () => {
                 className="border-t border-[#001838]/20 pt-4"
               >
                 <div className="relative">
-                  <motion.div 
+                  <motion.div
                     whileTap={{ scale: 0.95 }}
                     className="flex items-center justify-between px-4 py-3 bg-white/50 rounded-lg cursor-pointer"
                     onClick={() => setOpenLang(!openLang)}
@@ -303,7 +305,7 @@ export const Navbar = () => {
                       <ChevronDown size={18} />
                     </motion.div>
                   </motion.div>
-                  
+
                   <AnimatePresence>
                     {openLang && (
                       <motion.div
@@ -339,16 +341,17 @@ export const Navbar = () => {
                 transition={{ delay: 0.5 }}
                 className="border-t border-[#001838]/20 pt-4 flex items-center justify-between"
               >
-                <div className="flex items-center gap-3 text-[#001838]">
-                  <motion.span 
-                    whileHover={{ rotate: 10 }}
-                    className="bg-[#154284] p-2 rounded-full text-white"
-                  >
-                    <User2Icon size={18} />
-                  </motion.span>
-                  <span className="font-medium">Login</span>
-                </div>
-                
+                <NavLink onClick={closeMobileMenu} to="login" className="flex items-center gap-4">
+                  <div className="flex items-center gap-3 text-[#001838]">
+                    <motion.span
+                      whileHover={{ rotate: 10 }}
+                      className="bg-[#154284] p-2 rounded-full text-white"
+                    >
+                      <User2Icon size={18} />
+                    </motion.span>
+                    <span className="font-medium">Login</span>
+                  </div>
+                </NavLink>
                 <NavLink to="/" className="hover:opacity-80 transition-opacity duration-200">
                   <img src="./images/wix_lockup.svg" alt="Wix" className="w-16" />
                 </NavLink>
@@ -357,6 +360,6 @@ export const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.div>
+    </motion.div >
   );
 };
