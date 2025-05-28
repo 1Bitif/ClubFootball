@@ -171,7 +171,7 @@ export const History = () => {
                   className={`relative flex ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}
                 >
                   {/* Year indicator on timeline */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-slate-800 to-slate-900 rounded-full flex items-center justify-center shadow-lg border-4 border-white z-10">
+                  <div className=" hidden absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-slate-800 to-slate-900 rounded-full md:flex items-center justify-center shadow-lg border-4 border-white z-10">
                     <span className="text-white font-bold text-sm">{String(milestone.year).slice(-2)}</span>
                   </div>
                   
@@ -292,37 +292,37 @@ export const History = () => {
             {[
               {
                 title: "First Title Win (1937)",
-                image: "history-1937.jpg",
+                image: "First_Title_Win_1937.png",
                 description: "The team celebrating their first league title",
                 gradient: "from-blue-500 to-blue-600"
               },
               {
                 title: "Maine Road Era",
-                image: "history-maineroad.jpg",
+                image: "Maine_Road_Stadium.jpg",
                 description: "The famous Maine Road stadium in its heyday",
                 gradient: "from-emerald-500 to-emerald-600"
               },
               {
                 title: "Aguero Moment (2012)",
-                image: "history-aguero.jpg",
+                image: "Aguero_Moment.png",
                 description: "The dramatic last-minute title-winning goal",
                 gradient: "from-rose-500 to-rose-600"
               },
               {
                 title: "Centenary Celebration",
-                image: "history-centenary.jpg",
+                image: "Centenary.png",
                 description: "Celebrating 100 years as Manchester City",
                 gradient: "from-purple-500 to-purple-600"
               },
               {
                 title: "Etihad Stadium",
-                image: "history-etihad.jpg",
+                image: "Etihad_Stadium.jpg",
                 description: "The modern Etihad Stadium home",
                 gradient: "from-indigo-500 to-indigo-600"
               },
               {
                 title: "Treble Winners (2023)",
-                image: "history-treble.jpg",
+                image: "TrebleWinners.webp",
                 description: "Celebrating the historic treble season",
                 gradient: "from-amber-500 to-amber-600"
               }
@@ -337,7 +337,7 @@ export const History = () => {
                 <div className={`h-56 bg-gradient-to-br ${item.gradient} relative overflow-hidden`}>
                   <div className="absolute inset-0 bg-black/20"></div>
                   <img
-                    src={`./images/history/${item.image}`}
+                    src={`./images/${item.image}`}
                     alt={item.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     onError={(e) => {

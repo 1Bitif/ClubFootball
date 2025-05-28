@@ -19,7 +19,13 @@ export const Players = () => {
         loadPlayers();
     }, []);
 
-    if (loading) return <div>Loading players...</div>;
+    if (loading) return <div className="flex flex-col justify-center items-center min-h-screen bg-gray-50">
+  <div className="flex items-center space-x-3 mb-4">
+    <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-[#001838]"></div>
+    <span className="text-lg font-medium text-gray-700 lg:text-5xl">Loading players...</span>
+  </div>
+  <div className="text-sm  text-gray-500">Please wait while we retrieve the data</div>
+</div>;
 
 
     // Filter players based on active filter

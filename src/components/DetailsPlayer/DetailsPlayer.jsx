@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 import { fetchPlayerById } from '../../api/players';
 import { motion } from 'framer-motion';
 
@@ -98,7 +98,7 @@ export const DetailsPlayer = () => {
       initial="hidden"
       animate="show"
       variants={staggerContainer}
-      className="min-h-screen bg-gradient-to-br from-sky-50 to-blue-100 py-8 px-4 pt-16 md:pt-40"
+      className="min-h-screen bg-gradient-to-br from-sky-50 to-blue-100 py-8 px-4 pt-28 md:pt-40"
     >
       <div className="max-w-6xl mx-auto">
         {/* Header */}
@@ -107,6 +107,7 @@ export const DetailsPlayer = () => {
           className="flex flex-col md:flex-row items-center justify-between mb-8"
         >
           <div className="flex items-center mb-4 md:mb-0">
+        <NavLink to="/players" className="mr-4 bg-[#001838] text-white py-2 px-4 rounded-lg hover:bg-sky-600 transition duration-300">Back</NavLink>
             <div className="w-16 h-16 bg-sky-600 rounded-full flex items-center justify-center mr-4">
               <span className="text-white text-2xl font-bold">{player.jerseyNumber}</span>
             </div>

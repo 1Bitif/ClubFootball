@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Trophy, Users, Calendar, Shirt, MapPin, Award, Star, Globe } from 'lucide-react';
+import { Trophy, Users, Calendar, Shirt, MapPin, Award, Star, Globe, ChevronDown } from 'lucide-react';
 import { MapComponent } from '../MapComponent/MapComponent';
 
-export const Club = () => {
+export const Club = ({ scrollToAbout , aboutRef }) => {
   // Animation variants
   const container = {
     hidden: { opacity: 0 },
@@ -110,6 +110,7 @@ export const Club = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
         >
+        <img src="./images/TrebleWinners.webp" className='w-full opacity-30' alt="" />
           <motion.div
             animate={{
               x: [0, 100, 0],
@@ -215,10 +216,19 @@ export const Club = () => {
             </motion.button>
           </motion.div>
         </div>
+        {/* Scroll indicator */}
+        <motion.div 
+          className='absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 cursor-pointer'
+          animate={{ y: [0, 10, 0] }}
+          transition={{ repeat: Infinity, duration: 2 }}
+          onClick={scrollToAbout}
+        >
+          <ChevronDown className='text-white w-10 h-10' />
+        </motion.div>
       </section>
 
       {/* Enhanced Statistics Section */}
-      <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
+      <section ref={aboutRef} className="py-24 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial="hidden"
