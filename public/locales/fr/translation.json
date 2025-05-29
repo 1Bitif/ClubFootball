@@ -350,5 +350,13 @@
     "copyright": "Manchester City FC Ltd {{year}}",
     "manchesterCityLogoAlt": "Logo de Manchester City",
     "partnersAlt": "Partenaires de Manchester City"
+  },
+   "notFound": {
+    "title": "Page non trouvée",
+    "message1": "La ressource demandée n'a pas pu être trouvée sur nos serveurs.",
+    "message2": "Veuillez vérifier l'URL ou revenir en arrière pour continuer votre navigation.",
+    "goBack": "Retour",
+    "home": "Accueil",
+    "errorCode": "Code d'erreur"
   }
 }

@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 export const NotFound = () => {
+  const { t } = useTranslation();
+  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -146,17 +149,17 @@ export const NotFound = () => {
             className="text-3xl md:text-4xl font-bold text-white mb-6"
             variants={itemVariants}
           >
-            Page Not Found
+            {t('notFound.title')}
           </motion.h2>
           <motion.div
             className="space-y-3"
             variants={itemVariants}
           >
             <p className="text-lg md:text-xl text-sky-100 font-medium">
-              The requested resource could not be located on our servers.
+              {t('notFound.message1')}
             </p>
             <p className="text-base md:text-lg text-sky-200">
-              Please verify the URL or navigate back to continue your experience.
+              {t('notFound.message2')}
             </p>
           </motion.div>
         </motion.div>
@@ -174,7 +177,7 @@ export const NotFound = () => {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <span>←</span>
-            <span>Go Back</span>
+            <span>{t('notFound.goBack')}</span>
           </motion.button>
           
           <motion.button
@@ -185,7 +188,7 @@ export const NotFound = () => {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <span>🏠</span>
-            <span>Home</span>
+            <span>{t('notFound.home')}</span>
           </motion.button>
         </motion.div>
 
@@ -210,7 +213,7 @@ export const NotFound = () => {
             transition={{ duration: 1.5, repeat: Infinity, delay: 0.4 }}
           />
           <span className="text-sky-200 text-sm ml-4 font-medium">
-            Error Code: 404
+            {t('notFound.errorCode')}: 404
           </span>
         </motion.div>
       </motion.div>
