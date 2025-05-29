@@ -663,6 +663,7 @@ export const manCityPlayers = [
     stats: {
       appearances: 41,
       goals: 38,
+       passAccuracy: 84,
       assists: 7,
       shotsOnTarget: 72,
       shotAccuracy: 65,
