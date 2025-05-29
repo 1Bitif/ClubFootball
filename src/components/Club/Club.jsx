@@ -213,7 +213,7 @@ const honors = [
               whileTap={{ scale: 0.95 }}
               className="group bg-white cursor-pointer text-slate-900 px-10 py-4 rounded-full font-semibold text-lg hover:bg-blue-50 transition-all duration-300 shadow-2xl hover:shadow-white/25"
             >
-              <NavLink to="/history" className="flex items-center gap-2">
+              <NavLink to="/history" className="flex justify-center items-center gap-2">
                 {t('club.buttons.discoverStory')}
                 <motion.div
                   whileHover={{ rotate: 180 }}

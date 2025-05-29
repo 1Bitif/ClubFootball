@@ -271,7 +271,7 @@ export const Navbar = () => {
                     transition={{ delay: index * 0.1 }}
                   >
                     <NavLink
-                      to={`/${item}`}
+                      to={`${item === 'club' ? '/' : `/${item}`}`}
                       onClick={closeMobileMenu}
                       className={({ isActive }) =>
                         `block px-4 py-3 rounded-lg transition-colors duration-200 ${
