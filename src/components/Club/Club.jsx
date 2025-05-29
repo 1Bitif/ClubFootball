@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Trophy, Users, Calendar, Shirt, MapPin, Award, Star, Globe, ChevronDown } from 'lucide-react';
 import { MapComponent } from '../MapComponent/MapComponent';
 import { useTranslation } from 'react-i18next';
+import { NavLink } from 'react-router-dom';
 
 export const Club = ({ scrollToAbout, aboutRef }) => {
   
@@ -210,9 +211,9 @@ const honors = [
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="group bg-white text-slate-900 px-10 py-4 rounded-full font-semibold text-lg hover:bg-blue-50 transition-all duration-300 shadow-2xl hover:shadow-white/25"
+              className="group bg-white cursor-pointer text-slate-900 px-10 py-4 rounded-full font-semibold text-lg hover:bg-blue-50 transition-all duration-300 shadow-2xl hover:shadow-white/25"
             >
-              <span className="flex items-center gap-2">
+              <NavLink to="/history" className="flex items-center gap-2">
                 {t('club.buttons.discoverStory')}
                 <motion.div
                   whileHover={{ rotate: 180 }}
@@ -220,7 +221,7 @@ const honors = [
                 >
                   <div className="w-2 h-2 bg-white rounded-full"></div>
                 </motion.div>
-              </span>
+              </NavLink>
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05 }}

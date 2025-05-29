@@ -1,6 +1,4 @@
 import React, { useRef } from 'react'
-import { Hero } from '../../components/Sections/Hero/Hero'
-import { About } from '../../components/Sections/About/About'
 import { motion } from 'framer-motion'
 import { Club } from '../../components/Club/Club'
 
@@ -19,9 +17,6 @@ export const Home = () => {
       className='overflow-x-hidden'
     >
       <Club scrollToAbout={scrollToAbout} aboutRef={aboutRef} />
-      {/* <div ref={aboutRef}>
-        <About />
-      </div> */}
     </motion.main>
   )
 }
