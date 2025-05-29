@@ -127,7 +127,7 @@ export const Navbar = () => {
             {['club', 'players', 'history', 'contact'].map((item) => (
               <motion.div key={item} variants={itemVariants}>
                 <NavLink
-                  to={`/${item}`}
+                  to={`${item === 'club' ? '/' : `/${item}`}`}
                   className={({ isActive }) =>
                     `relative px-1 py-2 ${isActive ? "text-[#001838]" : "text-[#001838]/80"}`
                   }
