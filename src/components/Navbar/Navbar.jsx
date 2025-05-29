@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from "../Language/LanguageSwitcher";
 
 export const Navbar = () => {
   const { t, i18n } = useTranslation();
@@ -165,7 +166,7 @@ export const Navbar = () => {
         <motion.div variants={itemVariants} className="hidden lg:flex items-center gap-6">
           {/* Language Selector */}
           <div className="relative">
-            <motion.div
+            {/* <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center gap-1 cursor-pointer hover:text-[#154284] transition-colors duration-200"
@@ -178,10 +179,10 @@ export const Navbar = () => {
               >
                 <ChevronDown size={18} />
               </motion.div>
-            </motion.div>
+            </motion.div> */}
 
             <AnimatePresence>
-              {openLang && (
+              {/* {openLang && (
                 <motion.div
                   initial="hidden"
                   animate="visible"
@@ -197,11 +198,12 @@ export const Navbar = () => {
                       onClick={() => handleChangeLang(language)}
                       className="w-full text-left px-4 py-2 hover:bg-gray-100 transition-colors duration-150 text-sm"
                     >
-                      {language}
+                     {language}
                     </motion.button>
                   ))}
                 </motion.div>
-              )}
+              )} */}
+              <LanguageSwitcher />
             </AnimatePresence>
           </div>
 
@@ -294,7 +296,7 @@ export const Navbar = () => {
                 className="border-t border-[#001838]/20 pt-4"
               >
                 <div className="relative">
-                  <motion.div
+                  {/* <motion.div
                     whileTap={{ scale: 0.95 }}
                     className="flex items-center justify-between px-4 py-3 bg-white/50 rounded-lg cursor-pointer"
                     onClick={() => setOpenLang(!openLang)}
@@ -306,10 +308,10 @@ export const Navbar = () => {
                     >
                       <ChevronDown size={18} />
                     </motion.div>
-                  </motion.div>
+                  </motion.div> */}
 
                   <AnimatePresence>
-                    {openLang && (
+                    {/* {openLang && (
                       <motion.div
                         initial="hidden"
                         animate="visible"
@@ -329,7 +331,8 @@ export const Navbar = () => {
                           </motion.button>
                         ))}
                       </motion.div>
-                    )}
+                    )} */}
+                     <LanguageSwitcher />
                   </AnimatePresence>
                 </div>
               </motion.div>
