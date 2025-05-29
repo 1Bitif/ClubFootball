@@ -9,9 +9,12 @@ import {
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 
 export const Footer = () => {
+  const { t, i18n } = useTranslation();
   const currentYear = new Date().getFullYear();
+  
   const socialLinks = [
     { icon: <Youtube size={20} />, name: "YouTube" },
     { icon: <Instagram size={20} />, name: "Instagram" },
@@ -21,15 +24,19 @@ export const Footer = () => {
   ];
 
   const footerLinks = [
-    "ACCESSIBILITY",
-    "Fair Processing Notice",
-    "Cookie Policy",
-    "Modern Slavery Statement",
-    "Privacy Policy",
-    "Terms of Use",
-    "Contact Us",
-    "Sitemap",
+    t('footer.accessibility'),
+    t('footer.fairProcessingNotice'),
+    t('footer.cookiePolicy'),
+    t('footer.modernSlaveryStatement'),
+    t('footer.privacyPolicy'),
+    t('footer.termsOfUse'),
+    t('footer.contactUs'),
+    t('footer.sitemap'),
   ];
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
 
   return (
     <motion.footer 
@@ -49,7 +56,7 @@ export const Footer = () => {
           >
             <img 
               src="./images/logo.svg" 
-              alt="Manchester City Logo" 
+              alt={t('footer.manchesterCityLogoAlt')} 
               className="w-full h-auto" 
             />
           </motion.div>
@@ -61,9 +68,10 @@ export const Footer = () => {
               <motion.div 
                 whileHover={{ scale: 1.05 }}
                 className="flex items-center gap-2 p-2 rounded-full bg-[#154284] hover:bg-[#3bd6ff] hover:text-[#154284] transition-all duration-300 cursor-pointer"
+                onClick={() => changeLanguage(i18n.language === 'en' ? 'fr' : 'en')}
               >
                 <Globe size={18} />
-                <span className="font-medium">English</span>
+                <span className="font-medium">{i18n.language === 'en' ? 'English' : 'Français'}</span>
               </motion.div>
 
               {/* Social Links */}
@@ -116,7 +124,7 @@ export const Footer = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4 }}
           >
-            &copy; Manchester City FC Ltd {currentYear}
+            &copy; {t('footer.copyright', { year: currentYear })}
           </motion.p>
 
           {/* Fan Support */}
@@ -129,7 +137,7 @@ export const Footer = () => {
               to="#" 
               className="text-sm md:text-base font-medium underline hover:no-underline hover:text-[#3bd6ff] transition-colors duration-200"
             >
-              Fan Support
+              {t('footer.fanSupport')}
             </NavLink>
           </motion.div>
 
@@ -142,7 +150,7 @@ export const Footer = () => {
           >
             <img 
               src="./images/footerImage.png" 
-              alt="Manchester City Partners" 
+              alt={t('footer.partnersAlt')} 
               className="w-full h-auto" 
             />
           </motion.div>
