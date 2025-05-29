@@ -30,7 +30,7 @@
       "faCup": "FA Cup",
       "eflCup": "EFL Cup",
       "majourCompetition": "Major Competition",
-      "title" : "Titles",
+      "title": "Titles",
       "winningYears": "Winning Years"
     },
     "achievements": {
@@ -122,9 +122,38 @@
     },
     "age": "years",
     "ageShort": " yrs",
-    "imageAlt": "Photo"
+    "imageAlt": "Photo",
+    "bio": {
+      "stefanOrtega": "Stefan Ortega is a German goalkeeper who serves as reliable backup to Ederson. Known for his shot-stopping ability and distribution skills.",
+      "ederson": "Ederson is a Brazilian professional footballer known for his exceptional distribution and composure with the ball at his feet. He joined City from Benfica and has revolutionized the goalkeeper position with his playing style.",
+      "scottCarson": "Scott Carson is an experienced English goalkeeper who serves as a backup option. Known for his leadership and experience, he has played for several clubs in the Premier League.",
+      "kyleWalker": "Kyle Walker is an English right-back known for his incredible pace and defensive reliability. Club captain and one of the most experienced players in the squad.",
+      "rubenDias": "Rúben Dias is a Portuguese center-back who quickly established himself as a defensive leader after joining from Benfica. Won Premier League Player of the Season in his first year.",
+      "johnStones": "John Stones is an English defender known for his ball-playing abilities. Has developed into a hybrid defender-midfielder role under Pep Guardiola.",
+      "nathanAke": "Nathan Aké is a versatile Dutch defender who can play as center-back or left-back. Known for his intelligence and reliability in defense.",
+      "joskoGvardiol": "Josko Gvardiol is a young Croatian center-back known for his pace, strength, and ability to play out from the back. Joined City from RB Leipzig.",
+      "manuelAkanji": "Manuel Akanji is a Swiss center-back known for his pace, strength, and ability to play out from the back. Joined City from Borussia Dortmund.",
+      "ricoLewis": "Rico Lewis is an academy graduate who has impressed as both right-back and inverted full-back. One of England's most promising young defenders.",
+      "jahmaiSimpsonPusey": "Jahmai Simpson-Pusey is a young English defender who has shown promise in the academy. Known for his pace and ability to play as a right-back or center-back.",
+      "abdukodirKhusanov": "Abdukodir Khusanov is a young Uzbek defender who has shown promise in the academy. Known for his pace and ability to play as a right-back or center-back.",
+      "rodri": "Rodri is a Spanish defensive midfielder who serves as the team's pivot. Known for his positional awareness, passing range, and crucial goals in big matches.",
+      "kevinDeBruyne": "Kevin De Bruyne is widely regarded as one of the best midfielders in the world. Known for his vision, passing, crossing ability, and powerful shooting.",
+      "bernardoSilva": "Bernardo Silva is a Portuguese playmaker known for his technical skills, work rate, and versatility to play in multiple midfield and attacking positions.",
+      "philFoden": "Phil Foden is an English attacking midfielder and City academy product. Known as 'the Stockport Iniesta' for his technical ability and close control.",
+      "jackGrealish": "Jack Grealish is an English winger known for his dribbling skills, creativity, and ability to draw fouls. Joined from Aston Villa for a then-British record fee.",
+      "mateoKovacic": "Mateo Kovačić is a Croatian midfielder known for his technical ability, vision, and passing range. Joined from Chelsea to add depth to City's midfield.",
+      "jamesMcAtee": "James McAtee is a young English midfielder who has come through the City academy. Known for his technical skills and ability to play in various midfield roles.",
+      "matheusNunes": "Matheus Nunes is a Portuguese midfielder known for his box-to-box style, dribbling ability, and physical presence. Joined from Wolverhampton Wanderers to strengthen City's midfield options.",
+      "oscarBobb": "Oscar Bobb is a young Norwegian midfielder who has shown promise in the academy. Known for his technical skills and ability to play as a central or attacking midfielder.",
+      "ilkayGundogan": "İlkay Gündoğan is a German midfielder known for his intelligence, passing ability, and leadership. He played a crucial role in City's midfield before leaving for Barcelona in 2023.",
+      "nicoGonzalez": "Nico González is a young Spanish midfielder who joined City to add depth to the midfield. Known for his technical skills and ability to play as a central or attacking midfielder.",
+      "erlingHaaland": "Erling Haaland is a Norwegian striker known for his incredible goalscoring record, physicality, and speed. Broke numerous Premier League scoring records in his debut season.",
+      "jeremyDoku": "Jérémy Doku is a Belgian winger known for his explosive pace, dribbling ability, and creativity. Joined City from Rennes to add depth to the attacking options.",
+      "savinho": "Savinho is a young Brazilian forward known for his pace, dribbling, and ability to play as a winger or striker. Joined City from Monaco to bolster the attacking options.",
+      "omarMarmoush": "Omar Marmoush is an Egyptian forward known for his pace, dribbling, and ability to play as a winger or striker. Joined City from VfL Wolfsburg to add depth to the attacking options."
+    }
   },
-   "history": {
+  "history": {
     "hero": {
       "title": "Club History",
       "subtitle": "Over 140 years of legacy, triumph, and unwavering passion"
@@ -170,8 +199,8 @@
       "description": "Our collection of honors and achievements"
     },
     "trophies": {
-        "totalWins": "Total Wins",
-        "lastWon": "Last Won",
+      "totalWins": "Total Wins",
+      "lastWon": "Last Won",
       "premierLeague": {
         "name": "Premier League"
       },

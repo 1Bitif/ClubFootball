@@ -25,7 +25,7 @@ export const manCityPlayers = [
       tackleSuccess: 3,
       redCards: 0,
     },
-    bio: "Stefan Ortega is a German goalkeeper who serves as reliable backup to Ederson. Known for his shot-stopping ability and distribution skills.",
+    bio: "players.bio.stefanOrtega",
   },
   {
     id: 31,
@@ -52,7 +52,7 @@ export const manCityPlayers = [
       tackleSuccess: 3,
       redCards: 0,
     },
-    bio: "Ederson is a Brazilian professional footballer known for his exceptional distribution and composure with the ball at his feet. He joined City from Benfica and has revolutionized the goalkeeper position with his playing style.",
+    bio: "players.bio.ederson",
   },
   {
     id: 33,
@@ -79,7 +79,7 @@ export const manCityPlayers = [
       tackleSuccess: 3,
       redCards: 0,
     },
-    bio: "Scott Carson is an experienced English goalkeeper who serves as a backup option. Known for his leadership and experience, he has played for several clubs in the Premier League.",
+       bio: "players.bio.scottCarson",
   },
   // Defenders
   {
@@ -108,7 +108,7 @@ export const manCityPlayers = [
       yellowCards: 4,
       redCards: 0,
     },
-    bio: "Kyle Walker is an English right-back known for his incredible pace and defensive reliability. Club captain and one of the most experienced players in the squad.",
+     bio: "players.bio.kyleWalker",
   },
   {
     id: 3,
@@ -136,7 +136,7 @@ export const manCityPlayers = [
       yellowCards: 5,
       redCards: 0,
     },
-    bio: "Rúben Dias is a Portuguese center-back who quickly established himself as a defensive leader after joining from Benfica. Won Premier League Player of the Season in his first year.",
+    bio: "players.bio.rubenDias",
   },
   {
     id: 5,
@@ -164,7 +164,8 @@ export const manCityPlayers = [
       yellowCards: 3,
       redCards: 0,
     },
-    bio: "John Stones is an English defender known for his ball-playing abilities. Has developed into a hybrid defender-midfielder role under Pep Guardiola.",
+    bio: "players.bio.johnStones",
+
   },
   {
     id: 6,
@@ -192,7 +193,7 @@ export const manCityPlayers = [
       yellowCards: 2,
       redCards: 0,
     },
-    bio: "Nathan Aké is a versatile Dutch defender who can play as center-back or left-back. Known for his intelligence and reliability in defense.",
+    bio: "players.bio.nathanAke",
   },
   {
     id: 24,
@@ -220,7 +221,7 @@ export const manCityPlayers = [
       yellowCards: 2,
       redCards: 0,
     },
-    bio: "Josko Gvardiol is a young Croatian center-back known for his pace, strength, and ability to play out from the back. Joined City from RB Leipzig.",
+     bio: "players.bio.joskoGvardiol",
   },
   {
     id: 21,
@@ -248,7 +249,7 @@ export const manCityPlayers = [
       yellowCards: 2,
       redCards: 0,
     },
-    bio: "Manuel Akanji is a Swiss center-back known for his pace, strength, and ability to play out from the back. Joined City from Borussia Dortmund.",
+    bio: "players.bio.manuelAkanji",
   },
   {
     id: 82,
@@ -276,7 +277,7 @@ export const manCityPlayers = [
       yellowCards: 2,
       redCards: 0,
     },
-    bio: "Rico Lewis is an academy graduate who has impressed as both right-back and inverted full-back. One of England's most promising young defenders.",
+    bio: "players.bio.ricoLewis",
   },
   {
     id: 66,
@@ -304,7 +305,7 @@ export const manCityPlayers = [
       yellowCards: 2,
       redCards: 0,
     },
-    bio: "Jahmai Simpson-Pusey is a young English defender who has shown promise in the academy. Known for his pace and ability to play as a right-back or center-back.",
+    bio: "players.bio.jahmaiSimpsonPusey",
   },
   {
     id: 45,
@@ -332,7 +333,7 @@ export const manCityPlayers = [
       yellowCards: 2,
       redCards: 0,
     },
-    bio: "Abdukodir Khusanov is a young Uzbek defender who has shown promise in the academy. Known for his pace and ability to play as a right-back or center-back.",
+     bio: "players.bio.abdukodirKhusanov",
   },
 
   // Midfielders
@@ -362,7 +363,7 @@ export const manCityPlayers = [
       yellowCards: 6,
       redCards: 0,
     },
-    bio: "Rodri is a Spanish defensive midfielder who serves as the team's pivot. Known for his positional awareness, passing range, and crucial goals in big matches.",
+    bio: "players.bio.rodri",
   },
   {
     id: 17,
@@ -390,7 +391,7 @@ export const manCityPlayers = [
       yellowCards: 3,
       redCards: 0,
     },
-    bio: "Kevin De Bruyne is widely regarded as one of the best midfielders in the world. Known for his vision, passing, crossing ability, and powerful shooting.",
+     bio: "players.bio.kevinDeBruyne",
   },
   {
     id: 20,
@@ -418,7 +419,7 @@ export const manCityPlayers = [
       yellowCards: 2,
       redCards: 0,
     },
-    bio: "Bernardo Silva is a Portuguese playmaker known for his technical skills, work rate, and versatility to play in multiple midfield and attacking positions.",
+      bio: "players.bio.bernardoSilva"
   },
   {
     id: 47,
@@ -446,7 +447,7 @@ export const manCityPlayers = [
       yellowCards: 3,
       redCards: 0,
     },
-    bio: "Phil Foden is an English attacking midfielder and City academy product. Known as 'the Stockport Iniesta' for his technical ability and close control.",
+     bio: "players.bio.philFoden",
   },
   {
     id: 10,
@@ -474,7 +475,7 @@ export const manCityPlayers = [
       yellowCards: 5,
       redCards: 0,
     },
-    bio: "Jack Grealish is an English winger known for his dribbling skills, creativity, and ability to draw fouls. Joined from Aston Villa for a then-British record fee.",
+    bio: "players.bio.jackGrealish"
   },
   {
     id: 8,
@@ -502,7 +503,7 @@ export const manCityPlayers = [
       yellowCards: 5,
       redCards: 0,
     },
-    bio: "Mateo Kovačić is a Croatian midfielder known for his technical ability, vision, and passing range. Joined from Chelsea to add depth to City's midfield.",
+    bio: "players.bio.mateoKovacic",
   },
   {
     id: 87,
@@ -529,8 +530,8 @@ export const manCityPlayers = [
       tackleSuccess: 33,
       yellowCards: 5,
       redCards: 0,
-    },
-    bio: "James McAtee is a young English midfielder who has come through the City academy. Known for his technical skills and ability to play in various midfield roles.",
+    },  
+     bio: "players.bio.jamesMcAtee",
   },
   {
     id: 27,
@@ -558,7 +559,7 @@ export const manCityPlayers = [
       yellowCards: 5,
       redCards: 0,
     },
-    bio: "Matheus Nunes is a Portuguese midfielder known for his box-to-box style, dribbling ability, and physical presence. Joined from Wolverhampton Wanderers to strengthen City's midfield options.",
+    bio: "players.bio.matheusNunes",
   },
   {
     id: 52,
@@ -586,7 +587,7 @@ export const manCityPlayers = [
       yellowCards: 5,
       redCards: 0,
     },
-    bio: "Oscar Bobb is a young Norwegian midfielder who has shown promise in the academy. Known for his technical skills and ability to play as a central or attacking midfielder.",
+     bio: "players.bio.oscarBobb",
   },
   {
     id: 19,
@@ -614,7 +615,7 @@ export const manCityPlayers = [
       yellowCards: 5,
       redCards: 0,
     },
-    bio: "İlkay Gündoğan is a German midfielder known for his intelligence, passing ability, and leadership. He played a crucial role in City's midfield before leaving for Barcelona in 2023.",
+    bio: "players.bio.ilkayGundogan",
   },
   {
     id: 14,
@@ -642,7 +643,7 @@ export const manCityPlayers = [
       yellowCards: 5,
       redCards: 0,
     },
-    bio: "Nico González is a young Spanish midfielder who joined City to add depth to the midfield. Known for his technical skills and ability to play as a central or attacking midfielder.",
+      bio: "players.bio.nicoGonzalez",
   },
 
   // Forwards
@@ -673,7 +674,7 @@ export const manCityPlayers = [
       yellowCards: 4,
       redCards: 0,
     },
-    bio: "Erling Haaland is a Norwegian striker known for his incredible goalscoring record, physicality, and speed. Broke numerous Premier League scoring records in his debut season.",
+    bio: "players.bio.erlingHaaland",
   },
   {
     id: 11,
@@ -700,7 +701,7 @@ export const manCityPlayers = [
       yellowCards: 2,
       redCards: 0,
     },
-    bio: "Jérémy Doku is a Belgian winger known for his explosive pace, dribbling ability, and creativity. Joined City from Rennes to add depth to the attacking options.",
+    bio: "players.bio.jeremyDoku",
   },
   {
     id: 26,
@@ -727,7 +728,7 @@ export const manCityPlayers = [
       yellowCards: 2,
       redCards: 0,
     },
-    bio: "Savinho is a young Brazilian forward known for his pace, dribbling, and ability to play as a winger or striker. Joined City from Monaco to bolster the attacking options.",
+    bio: "players.bio.savinho",
   },
   {
     id: 7,
@@ -755,6 +756,6 @@ export const manCityPlayers = [
       yellowCards: 2,
       redCards: 0,
     },
-    bio: "Omar Marmoush is an Egyptian forward known for his pace, dribbling, and ability to play as a winger or striker. Joined City from VfL Wolfsburg to add depth to the attacking options.",
+    bio: "players.bio.omarMarmoush",
   },
 ];

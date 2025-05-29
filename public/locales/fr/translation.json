@@ -122,7 +122,36 @@
     },
     "age": "ans",
     "ageShort": "ans",
-    "imageAlt": "Photo"
+    "imageAlt": "Photo",
+     "bio": {
+      "stefanOrtega": "Stefan Ortega est un gardien allemand qui sert de remplaçant fiable à Ederson. Connu pour ses arrêts et ses qualités de distribution.",
+      "ederson": "Ederson est un footballeur brésilien professionnel connu pour sa distribution exceptionnelle et son sang-froid avec le ballon. Il a rejoint City depuis Benfica et a révolutionné le poste de gardien avec son style de jeu.",
+      "scottCarson": "Scott Carson est un gardien anglais expérimenté qui sert d'option de réserve. Connu pour son leadership et son expérience, il a joué pour plusieurs clubs de Premier League.",
+      "kyleWalker": "Kyle Walker est un arrière droit anglais connu pour son incroyable vitesse et sa fiabilité défensive. Capitaine du club et l'un des joueurs les plus expérimentés de l'effectif.",
+      "rubenDias": "Rúben Dias est un défenseur central portugais qui s'est rapidement imposé comme un leader défensif après son arrivée de Benfica. A remporté le titre de Joueur de la Saison en Premier League lors de sa première année.",
+      "johnStones": "John Stones est un défenseur anglais connu pour ses qualités de jeu au pied. S'est développé dans un rôle hybride défenseur-milieu sous Pep Guardiola.",
+      "nathanAke": "Nathan Aké est un défenseur néerlandais polyvalent qui peut jouer comme défenseur central ou arrière gauche. Connu pour son intelligence et sa fiabilité en défense.",
+      "joskoGvardiol": "Josko Gvardiol est un jeune défenseur central croate connu pour sa vitesse, sa force et sa capacité à jouer depuis l'arrière. A rejoint City depuis le RB Leipzig.",
+      "manuelAkanji": "Manuel Akanji est un défenseur central suisse connu pour sa vitesse, sa force et sa capacité à jouer depuis l'arrière. A rejoint City depuis Borussia Dortmund.",
+      "ricoLewis": "Rico Lewis est un produit du centre de formation qui a impressionné comme arrière droit et latéral inversé. L'un des jeunes défenseurs les plus prometteurs d'Angleterre.",
+      "jahmaiSimpsonPusey": "Jahmai Simpson-Pusey est un jeune défenseur anglais qui a montré des promesses dans le centre de formation. Connu pour sa vitesse et sa capacité à jouer comme arrière droit ou défenseur central.",
+      "abdukodirKhusanov": "Abdukodir Khusanov est un jeune défenseur ouzbek qui a montré des promesses dans le centre de formation. Connu pour sa vitesse et sa capacité à jouer comme arrière droit ou défenseur central.",
+      "rodri": "Rodri est un milieu défensif espagnol qui sert de pivot à l'équipe. Connu pour sa conscience positionnelle, sa gamme de passes et ses buts cruciaux dans les grands matchs.",
+      "kevinDeBruyne": "Kevin De Bruyne est largement considéré comme l'un des meilleurs milieux de terrain au monde. Connu pour sa vision, ses passes, ses centres et ses frappes puissantes.",
+      "bernardoSilva": "Bernardo Silva est un meneur de jeu portugais connu pour ses qualités techniques, son taux de travail et sa polyvalence pour jouer à plusieurs postes en milieu et en attaque.",
+      "philFoden": "Phil Foden est un milieu offensif anglais et produit du centre de formation de City. Surnommé 'le Iniesta de Stockport' pour ses qualités techniques et son contrôle de balle.",
+      "jackGrealish": "Jack Grealish est un ailier anglais connu pour ses dribbles, sa créativité et sa capacité à provoquer des fautes. A rejoint City depuis Aston Villa pour un montant record britannique à l'époque.",
+      "mateoKovacic": "Mateo Kovačić est un milieu de terrain croate connu pour ses qualités techniques, sa vision et sa gamme de passes. A rejoint City depuis Chelsea pour renforcer les options au milieu.",
+      "jamesMcAtee": "James McAtee est un jeune milieu de terrain anglais issu du centre de formation de City. Connu pour ses qualités techniques et sa capacité à jouer à différents postes au milieu.",
+      "matheusNunes": "Matheus Nunes est un milieu de terrain portugais connu pour son style box-to-box, sa capacité de dribble et sa présence physique. A rejoint City depuis Wolverhampton Wanderers pour renforcer les options au milieu.",
+      "oscarBobb": "Oscar Bobb est un jeune milieu de terrain norvégien qui a montré des promesses dans le centre de formation. Connu pour ses qualités techniques et sa capacité à jouer comme milieu central ou offensif.",
+      "ilkayGundogan": "İlkay Gündoğan est un milieu de terrain allemand connu pour son intelligence, sa qualité de passe et son leadership. Il a joué un rôle crucial au milieu de terrain de City avant de partir pour Barcelone en 2023.",
+      "nicoGonzalez": "Nico González est un jeune milieu de terrain espagnol qui a rejoint City pour renforcer l'effectif au milieu. Connu pour ses qualités techniques et sa capacité à jouer comme milieu central ou offensif.",
+      "erlingHaaland": "Erling Haaland est un attaquant norvégien connu pour son incroyable record de buts, sa puissance physique et sa vitesse. A battu de nombreux records de buts en Premier League lors de sa première saison.",
+      "jeremyDoku": "Jérémy Doku est un ailier belge connu pour son explosivité, sa capacité de dribble et sa créativité. A rejoint City depuis Rennes pour renforcer les options en attaque.",
+      "savinho": "Savinho est un jeune attaquant brésilien connu pour sa vitesse, ses dribbles et sa capacité à jouer comme ailier ou attaquant. A rejoint City depuis Monaco pour renforcer les options offensives.",
+      "omarMarmoush": "Omar Marmoush est un attaquant égyptien connu pour sa vitesse, ses dribbles et sa capacité à jouer comme ailier ou attaquant. A rejoint City depuis VfL Wolfsburg pour renforcer les options offensives."
+    }
   },
   "history": {
     "hero": {

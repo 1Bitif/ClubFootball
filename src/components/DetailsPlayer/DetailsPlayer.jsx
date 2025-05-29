@@ -205,7 +205,7 @@ export const DetailsPlayer = () => {
             >
               <h3 className="text-xl font-bold text-sky-900 mb-4">{t('player.biography')}</h3>
               <p className="text-gray-700 leading-relaxed">
-                {player.bio || t('player.noBio')}
+                {t(player.bio) || t('player.noBio')}
               </p>
             </motion.div>
           </motion.div>
