@@ -2,8 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Trophy, Users, Calendar, Shirt, MapPin, Award, Star, Globe, ChevronDown } from 'lucide-react';
 import { MapComponent } from '../MapComponent/MapComponent';
+import { useTranslation } from 'react-i18next';
 
 export const Club = ({ scrollToAbout, aboutRef }) => {
+  
+  const {t} = useTranslation()
+
   // Animation variants
   const container = {
     hidden: { opacity: 0 },
@@ -37,51 +41,58 @@ export const Club = ({ scrollToAbout, aboutRef }) => {
 
   // Club statistics data
   const stats = [
-    { icon: <Trophy size={28} />, value: '32', label: 'Major Trophies', color: 'from-amber-500 to-orange-600' },
-    { icon: <Users size={28} />, value: '450M+', label: 'Global Fans', color: 'from-blue-600 to-indigo-700' },
-    { icon: <Calendar size={28} />, value: '1894', label: 'Est. Founded', color: 'from-emerald-500 to-teal-600' },
-    { icon: <Award size={28} />, value: '#1', label: 'Premier League', color: 'from-purple-600 to-violet-700' },
-    { icon: <MapPin size={28} />, value: '53,400', label: 'Stadium Capacity', color: 'from-rose-500 to-pink-600' }
+    { icon: <Trophy size={28} />, value: '32', label: t('club.stats.majorTrophies') , color: 'from-amber-500 to-orange-600' },
+    { icon: <Users size={28} />, value: '450M+', label: t('club.stats.globalFans'), color: 'from-blue-600 to-indigo-700' },
+    { icon: <Calendar size={28} />, value: '1894', label: t('club.stats.established'), color: 'from-emerald-500 to-teal-600' },
+    { icon: <Award size={28} />, value: '#1', label: t('club.stats.premierLeague'), color: 'from-purple-600 to-violet-700' },
+    { icon: <MapPin size={28} />, value: '53,400', label: t('club.stats.stadiumCapacity'), color: 'from-rose-500 to-pink-600' }
   ];
 
   // Club honors data with enhanced styling
-  const honors = [
-  {
-    title: 'Premier League',
-    count: 9,
-    years: ['1937', '1968', '2012', '2014', '2018', '2019', '2021', '2022', '2023'],
-    icon: <Trophy className="w-5 h-5" />,
-    gradient: 'from-blue-600 to-blue-800'
-  },
-  {
-    title: 'UEFA Champions League',
-    count: 1,
-    years: ['2023'],
-    icon: <Star className="w-5 h-5" />,
-    gradient: 'from-purple-600 to-purple-800'
-  },
-  {
-    title: 'FA Cup',
-    count: 7,
-    years: ['1904', '1934', '1956', '1969', '2011', '2019', '2023'],
-    icon: <Award className="w-5 h-5" />,
-    gradient: 'from-emerald-600 to-emerald-800'
-  },
-  {
-    title: 'EFL Cup',
-    count: 8,
-    years: ['1970', '1976', '2014', '2016', '2018', '2019', '2020', '2021'],
-    icon: <Trophy className="w-5 h-5" />,
-    gradient: 'from-amber-600 to-amber-800'
-  }
-];
+const honors = [
+    {
+      title: t('club.honors.premierLeague'),
+      count: 9,
+      years: ['1937', '1968', '2012', '2014', '2018', '2019', '2021', '2022', '2023'],
+      icon: <Trophy className="w-5 h-5" />,
+      gradient: 'from-blue-600 to-blue-800'
+    },
+    {
+      title: t('club.honors.championsLeague'),
+      count: 1,
+      years: ['2023'],
+      icon: <Star className="w-5 h-5" />,
+      gradient: 'from-purple-600 to-purple-800'
+    },
+    {
+      title: t('club.honors.faCup'),
+      count: 7,
+      years: ['1904', '1934', '1956', '1969', '2011', '2019', '2023'],
+      icon: <Award className="w-5 h-5" />,
+      gradient: 'from-emerald-600 to-emerald-800'
+    },
+    {
+      title: t('club.honors.eflCup'),
+      count: 8,
+      years: ['1970', '1976', '2014', '2016', '2018', '2019', '2020', '2021'],
+      icon: <Trophy className="w-5 h-5" />,
+      gradient: 'from-amber-600 to-amber-800'
+    }
+  ];
 
 
   const achievements = [
-    { label: 'Consecutive Premier League Titles', value: '4', period: '2017-2021' },
-    { label: 'Domestic Treble Winner', value: '2019', period: 'First English Club' },
-    { label: 'Record Points in Premier League', value: '100pts', period: '2017-18 Season' },
-    { label: 'UEFA Coefficient Ranking', value: 'Top 3', period: 'European Elite' }
+    { label: t('club.achievements.consecutiveTitles'), value: '4', period: '2017-2021' },
+    { label: t('club.achievements.domesticTreble'), value: '2019', period: t('club.achievements.firstEnglishClub') },
+    { label: t('club.achievements.recordPoints'), value: '100pts', period: '2017-2018' },
+    { label: t('club.achievements.uefaRanking'), value: 'Top 3', period: t('club.achievements.europeanElite') }
+  ];
+
+  const stadiumStats = [
+    { value: '53,400', label: t('club.stadium.seatingCapacity'), color: 'text-blue-600' },
+    { value: '2003', label: t('club.stadium.yearOpened'), color: 'text-emerald-600' },
+    { value: '330M', label: t('club.stadium.cost'), color: 'text-purple-600' },
+    { value: '4★', label: t('club.stadium.uefaRating'), color: 'text-amber-600' }
   ];
 
   return (
@@ -167,7 +178,7 @@ export const Club = ({ scrollToAbout, aboutRef }) => {
               className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8"
             >
               <Globe className="w-5 h-5 text-blue-300" />
-              <span className="text-blue-100 font-medium">Premier League Champions</span>
+              <span className="text-blue-100 font-medium">{t('club.hero.championsBadge')}</span>
             </motion.div>
           </motion.div>
 
@@ -187,8 +198,7 @@ export const Club = ({ scrollToAbout, aboutRef }) => {
             className="max-w-4xl mx-auto mb-12"
           >
             <p className="text-xl md:text-2xl text-blue-100 leading-relaxed font-light">
-              A global football powerhouse with unmatched excellence, innovation, and a commitment
-              to beautiful football. Home to world-class talent and a legacy of triumph.
+              {t('club.hero.description')}
             </p>
           </motion.div>
 
@@ -203,7 +213,7 @@ export const Club = ({ scrollToAbout, aboutRef }) => {
               className="group bg-white text-slate-900 px-10 py-4 rounded-full font-semibold text-lg hover:bg-blue-50 transition-all duration-300 shadow-2xl hover:shadow-white/25"
             >
               <span className="flex items-center gap-2">
-                Discover Our Story
+                {t('club.buttons.discoverStory')}
                 <motion.div
                   whileHover={{ rotate: 180 }}
                   className="w-5 h-5 bg-slate-900 rounded-full flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300"
@@ -217,7 +227,7 @@ export const Club = ({ scrollToAbout, aboutRef }) => {
               whileTap={{ scale: 0.95 }}
               className="border-2 border-white/30 text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-white/10 backdrop-blur-sm transition-all duration-300"
             >
-              Watch Highlights
+              {t('club.buttons.watchHighlights')}
             </motion.button>
           </motion.div>
         </div>
@@ -244,14 +254,13 @@ export const Club = ({ scrollToAbout, aboutRef }) => {
           >
             <motion.div variants={item} className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full font-medium mb-6">
               <Trophy className="w-4 h-4" />
-              Excellence in Numbers
+              {t('club.sections.excellence.subtitle')}
             </motion.div>
             <motion.h2 variants={item} className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Defining <span className="text-blue-600">Excellence</span>
+              {t('club.sections.excellence.title')} <span className="text-blue-600">{t('club.sections.excellence.highlight')}</span>
             </motion.h2>
             <motion.p variants={item} className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Our achievements speak volumes about our commitment to excellence and our position
-              among the world's elite football clubs.
+              {t('club.sections.excellence.description')}
             </motion.p>
           </motion.div>
 
@@ -264,7 +273,7 @@ export const Club = ({ scrollToAbout, aboutRef }) => {
           >
             {stats.map((stat, index) => (
               <motion.div
-                key={stat.label}
+                key={index}
                 variants={item}
                 whileHover={{ y: -10 }}
                 className="group relative bg-white p-8 rounded-3xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
@@ -296,7 +305,7 @@ export const Club = ({ scrollToAbout, aboutRef }) => {
           >
             {achievements.map((achievement, index) => (
               <motion.div
-                key={achievement.label}
+                key={index}
                 variants={item}
                 whileHover={{ scale: 1.03 }}
                 className="bg-white p-6 rounded-2xl shadow-md border border-gray-100"
@@ -322,14 +331,13 @@ export const Club = ({ scrollToAbout, aboutRef }) => {
           >
             <motion.div variants={item} className="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 px-4 py-2 rounded-full font-medium mb-6 border border-amber-500/20">
               <Award className="w-4 h-4" />
-              Trophy Cabinet
+              {t('club.sections.honors.subtitle')}
             </motion.div>
             <motion.h2 variants={item} className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Champions <span className="text-amber-400">Legacy</span>
+               {t('club.sections.honors.title')} <span className="text-amber-400"> {t('club.sections.honors.highlight')}</span>
             </motion.h2>
             <motion.p variants={item} className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              A distinguished collection of trophies that represents decades of dedication,
-              skill, and unwavering pursuit of excellence.
+               {t('club.sections.honors.description')}
             </motion.p>
           </motion.div>
 
@@ -342,7 +350,7 @@ export const Club = ({ scrollToAbout, aboutRef }) => {
           >
             {honors.map((honor, index) => (
               <motion.div
-                key={honor.title}
+                key={index}
                 variants={item}
                 whileHover={{ y: -10 }}
                 className="group relative bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition-all duration-500"
@@ -359,12 +367,12 @@ export const Club = ({ scrollToAbout, aboutRef }) => {
                     </motion.div>
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-1">{honor.title}</h3>
-                      <p className="text-gray-400">Major Competition</p>
+                      <p className="text-gray-400">{t('club.honors.majourCompetition')}</p>
                     </div>
                   </div>
                   <div className="text-center">
                     <div className="text-4xl font-bold text-amber-400 mb-1">{honor.count}</div>
-                    <p className="text-gray-400 text-sm">Titles</p>
+                    <p className="text-gray-400 text-sm">{t('club.honors.title')}</p>
                   </div>
                 </div>
 
@@ -372,7 +380,7 @@ export const Club = ({ scrollToAbout, aboutRef }) => {
                   whileHover={{ scale: 1.02 }}
                   className="bg-white/5 p-4 rounded-xl border border-white/10"
                 >
-                  <p className="text-gray-300 text-sm font-medium mb-1">Winning Years</p>
+                  <p className="text-gray-300 text-sm font-medium mb-1">{t('club.honors.winningYears')}</p>
                   <div className="flex flex-wrap gap-2">
                     {honor?.years?.map((year, idx) => (
                       <span className="bg-transparent rounded-full px-4 py-2 border border-white/10 text-white">{year}</span>
@@ -398,31 +406,24 @@ export const Club = ({ scrollToAbout, aboutRef }) => {
             <motion.div variants={item}>
               <motion.div variants={item} className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full font-medium mb-8">
                 <MapPin className="w-4 h-4" />
-                Our Home
+                {t('club.sections.stadium.subtitle')}
               </motion.div>
 
               <motion.h2 variants={item} className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Etihad Stadium
+                 {t('club.sections.stadium.title')}
               </motion.h2>
 
               <motion.p variants={item} className="text-xl text-gray-600 mb-8 leading-relaxed">
-                A architectural masterpiece and our fortress since 2003. The Etihad Stadium
-                represents the pinnacle of modern football venue design, offering an unparalleled
-                matchday experience for over 53,000 passionate supporters.
+               {t('club.sections.stadium.description')}
               </motion.p>
 
               <motion.div
                 variants={container}
                 className="grid grid-cols-2 gap-6 mb-8"
               >
-                {[
-                  { value: '53,400', label: 'Seating Capacity', color: 'text-blue-600' },
-                  { value: '2003', label: 'Year Opened', color: 'text-emerald-600' },
-                  { value: '330M', label: 'Cost (GBP)', color: 'text-purple-600' },
-                  { value: '4★', label: 'UEFA Rating', color: 'text-amber-600' }
-                ].map((item, index) => (
+                {stadiumStats.map((item, index) => (
                   <motion.div
-                    key={item.label}
+                    key={index}
                     variants={item}
                     whileHover={{ y: -5 }}
                     className="bg-white p-6 rounded-2xl shadow-md border border-gray-100"
@@ -443,7 +444,7 @@ export const Club = ({ scrollToAbout, aboutRef }) => {
                   whileTap={{ scale: 0.95 }}
                   className="bg-slate-900 text-white px-8 py-4 rounded-full font-semibold hover:bg-slate-800 transition-all duration-300 shadow-lg"
                 >
-                  Book Stadium Tour
+                 {t('club.buttons.bookTour')}
                 </motion.button>
                 <motion.button
                   variants={item}
@@ -451,7 +452,7 @@ export const Club = ({ scrollToAbout, aboutRef }) => {
                   whileTap={{ scale: 0.95 }}
                   className="border-2 border-slate-200 text-slate-700 px-8 py-4 rounded-full font-semibold hover:bg-slate-50 transition-all duration-300"
                 >
-                  Virtual Tour
+                  {t('club.buttons.virtualTour')}
                 </motion.button>
               </motion.div>
             </motion.div>
@@ -520,12 +521,10 @@ export const Club = ({ scrollToAbout, aboutRef }) => {
             variants={container}
           >
             <motion.h2 variants={item} className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Join the <span className="text-blue-400">City Family</span>
+              {t('club.sections.cta.title')} <span className="text-blue-400">{t('club.sections.cta.highlight')}</span>
             </motion.h2>
             <motion.p variants={item} className="text-xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
-              Become part of a global community that shares the passion for beautiful football,
-              excellence, and the Manchester City legacy. Experience the pride, the victories,
-              and the unforgettable moments together.
+               {t('club.sections.cta.description')}
             </motion.p>
 
             <motion.div
@@ -539,7 +538,7 @@ export const Club = ({ scrollToAbout, aboutRef }) => {
                 className="group bg-white text-slate-900 px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition-all duration-300 shadow-2xl"
               >
                 <span className="flex items-center gap-3">
-                  Become a Member
+                 {t('club.buttons.becomeMember')}
                   <motion.div
                     whileHover={{ rotate: 180 }}
                     className="w-6 h-6 bg-slate-900 rounded-full flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300"
@@ -554,7 +553,7 @@ export const Club = ({ scrollToAbout, aboutRef }) => {
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-white/30 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/10 backdrop-blur-sm transition-all duration-300"
               >
-                Official Store
+                {t('club.buttons.officialStore')}
               </motion.button>
             </motion.div>
           </motion.div>

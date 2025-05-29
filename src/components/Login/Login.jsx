@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
-// Animation variants
+// Animation variants (unchanged)
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
   visible: {
@@ -35,6 +36,7 @@ const pulse = {
 };
 
 export const Login = () => {
+  const { t } = useTranslation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
@@ -71,8 +73,8 @@ export const Login = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14a4 4 0 01-4-4V6a4 4 0 014-4 4 4 0 014 4v4a4 4 0 01-4 4z" />
             </svg>
           </motion.div>
-          <h1 className="text-3xl font-bold text-sky-900">Welcome Back</h1>
-          <p className="text-sky-700 mt-2">Sign in to your City account</p>
+          <h1 className="text-3xl font-bold text-sky-900">{t('login.welcome')}</h1>
+          <p className="text-sky-700 mt-2">{t('login.subtitle')}</p>
         </motion.div>
 
         {/* Login Card */}
@@ -82,7 +84,9 @@ export const Login = () => {
         >
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-sky-700 mb-1">Email Address</label>
+              <label htmlFor="email" className="block text-sm font-medium text-sky-700 mb-1">
+                {t('login.emailLabel')}
+              </label>
               <motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.99 }}>
                 <input
                   type="email"
@@ -90,14 +94,16 @@ export const Login = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full px-4 py-3 border border-sky-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none transition placeholder-sky-300"
-                  placeholder="your.email@example.com"
+                  placeholder={t('login.emailPlaceholder')}
                   required
                 />
               </motion.div>
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-sky-700 mb-1">Password</label>
+              <label htmlFor="password" className="block text-sm font-medium text-sky-700 mb-1">
+                {t('login.passwordLabel')}
+              </label>
               <motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.99 }}>
                 <input
                   type="password"
@@ -105,7 +111,7 @@ export const Login = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   className="w-full px-4 py-3 border border-sky-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none transition placeholder-sky-300"
-                  placeholder="••••••••"
+                  placeholder={t('login.passwordPlaceholder')}
                   required
                 />
               </motion.div>
@@ -122,13 +128,13 @@ export const Login = () => {
                   className="h-4 w-4 text-sky-600 focus:ring-sky-500 border-sky-300 rounded"
                 />
                 <label htmlFor="remember-me" className="ml-2 block text-sm text-sky-700">
-                  Remember me
+                  {t('login.rememberMe')}
                 </label>
               </div>
 
               <div className="text-sm">
                 <a href="#" className="font-medium text-sky-600 hover:text-sky-500">
-                  Forgot password?
+                  {t('login.forgotPassword')}
                 </a>
               </div>
             </div>
@@ -145,7 +151,7 @@ export const Login = () => {
                   <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                   <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>
-              ) : 'Sign in'}
+              ) : t('login.signIn')}
             </motion.button>
           </form>
 
@@ -155,7 +161,7 @@ export const Login = () => {
                 <div className="w-full border-t border-sky-200"></div>
               </div>
               <div className="relative flex justify-center text-sm">
-                <span className="px-2 bg-white text-sky-500">Or continue with</span>
+                <span className="px-2 bg-white text-sky-500">{t('login.orContinueWith')}</span>
               </div>
             </div>
 
@@ -184,9 +190,10 @@ export const Login = () => {
           variants={fadeInUp}
           className="text-center mt-8 text-sm text-sky-600"
         >
-          <p>New to City?{' '}
+          <p>
+            {t('login.newToApp')}{' '}
             <a href="#" className="font-medium text-sky-700 hover:text-sky-600 underline">
-              Create an account
+              {t('login.createAccount')}
             </a>
           </p>
         </motion.div>

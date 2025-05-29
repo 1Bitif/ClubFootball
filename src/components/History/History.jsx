@@ -2,61 +2,129 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Trophy, Calendar, Flag, Star, Award, Clock } from 'lucide-react';
 import { Stadium } from '../../assets/Icons';
+import { useTranslation } from 'react-i18next';
 
 export const History = () => {
+  const { t } = useTranslation();
+
   // Club history milestones
   const milestones = [
     {
       year: 1880,
-      title: "Club Foundation",
-      description: "Founded as St. Mark's (West Gorton) by Anna Connell and church wardens.",
+      title: t('history.milestones.foundation.title'),
+      description: t('history.milestones.foundation.description'),
       icon: <Calendar className="text-blue-500" size={24} />
     },
     {
       year: 1894,
-      title: "Becomes Manchester City",
-      description: "The club changes its name to Manchester City Football Club.",
+      title: t('history.milestones.nameChange.title'),
+      description: t('history.milestones.nameChange.description'),
       icon: <Flag className="text-emerald-500" size={24} />
     },
     {
       year: 1937,
-      title: "First League Title",
-      description: "Won the First Division title for the first time in club history.",
+      title: t('history.milestones.firstTitle.title'),
+      description: t('history.milestones.firstTitle.description'),
       icon: <Trophy className="text-amber-500" size={24} />
     },
     {
       year: 2003,
-      title: "Move to Etihad Stadium",
-      description: "Relocated to the City of Manchester Stadium (now Etihad Stadium).",
+      title: t('history.milestones.stadiumMove.title'),
+      description: t('history.milestones.stadiumMove.description'),
       icon: <Stadium className="text-purple-500" size={24} />
     },
     {
       year: 2008,
-      title: "New Ownership",
-      description: "Taken over by Abu Dhabi United Group, marking a new era for the club.",
+      title: t('history.milestones.ownership.title'),
+      description: t('history.milestones.ownership.description'),
       icon: <Star className="text-indigo-500" size={24} />
     },
     {
       year: 2012,
-      title: "Dramatic Premier League Win",
-      description: "Won the Premier League in dramatic fashion with Aguero's last-minute goal.",
+      title: t('history.milestones.dramaticWin.title'),
+      description: t('history.milestones.dramaticWin.description'),
       icon: <Trophy className="text-rose-500" size={24} />
     },
     {
       year: 2023,
-      title: "Treble Winners",
-      description: "Won Premier League, FA Cup, and Champions League in a historic season.",
+      title: t('history.milestones.treble.title'),
+      description: t('history.milestones.treble.description'),
       icon: <Award className="text-yellow-500" size={24} />
     }
   ];
 
   // Trophy history
   const trophies = [
-    { name: "Premier League", count: 9, lastWon: 2023, color: "from-blue-500 to-blue-600" },
-    { name: "FA Cup", count: 7, lastWon: 2023, color: "from-emerald-500 to-emerald-600" },
-    { name: "League Cup", count: 8, lastWon: 2021, color: "from-purple-500 to-purple-600" },
-    { name: "Champions League", count: 1, lastWon: 2023, color: "from-amber-500 to-amber-600" },
-    { name: "European Cup Winners' Cup", count: 1, lastWon: 1970, color: "from-rose-500 to-rose-600" }
+    { 
+      name: t('history.trophies.premierLeague.name'), 
+      count: 9, 
+      lastWon: 2023, 
+      color: "from-blue-500 to-blue-600" 
+    },
+    { 
+      name: t('history.trophies.faCup.name'), 
+      count: 7, 
+      lastWon: 2023, 
+      color: "from-emerald-500 to-emerald-600" 
+    },
+    { 
+      name: t('history.trophies.leagueCup.name'), 
+      count: 8, 
+      lastWon: 2021, 
+      color: "from-purple-500 to-purple-600" 
+    },
+    { 
+      name: t('history.trophies.championsLeague.name'), 
+      count: 1, 
+      lastWon: 2023, 
+      color: "from-amber-500 to-amber-600" 
+    },
+    { 
+      name: t('history.trophies.cupWinnersCup.name'), 
+      count: 1, 
+      lastWon: 1970, 
+      color: "from-rose-500 to-rose-600" 
+    }
+  ];
+
+  // Historical gallery items
+  const galleryItems = [
+    {
+      title: t('history.gallery.firstTitle.title'),
+      image: "First_Title_Win_1937.png",
+      description: t('history.gallery.firstTitle.description'),
+      gradient: "from-blue-500 to-blue-600"
+    },
+    {
+      title: t('history.gallery.maineRoad.title'),
+      image: "Maine_Road_Stadium.jpg",
+      description: t('history.gallery.maineRoad.description'),
+      gradient: "from-emerald-500 to-emerald-600"
+    },
+    {
+      title: t('history.gallery.aguero.title'),
+      image: "Aguero_Moment.png",
+      description: t('history.gallery.aguero.description'),
+      gradient: "from-rose-500 to-rose-600"
+    },
+    {
+      title: t('history.gallery.centenary.title'),
+      image: "Centenary.png",
+      description: t('history.gallery.centenary.description'),
+      gradient: "from-purple-500 to-purple-600"
+    },
+    {
+      title: t('history.gallery.etihad.title'),
+      image: "Etihad_Stadium.jpg",
+      description: t('history.gallery.etihad.description'),
+      gradient: "from-indigo-500 to-indigo-600"
+    },
+    {
+      title: t('history.gallery.treble.title'),
+      image: "TrebleWinners.webp",
+      description: t('history.gallery.treble.description'),
+      gradient: "from-amber-500 to-amber-600"
+    }
   ];
 
   const containerVariants = {
@@ -120,10 +188,10 @@ export const History = () => {
             </motion.div>
             
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-              Club History
+              {t('history.hero.title')}
             </h1>
             <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-              Over 140 years of legacy, triumph, and unwavering passion
+              {t('history.hero.subtitle')}
             </p>
             
             <motion.div
@@ -147,10 +215,12 @@ export const History = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-              Historical <span className="bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">Milestones</span>
+              {t('history.timeline.title')} <span className="bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">
+                {t('history.timeline.highlight')}
+              </span>
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-8">
-              Key moments that shaped our incredible journey
+              {t('history.timeline.description')}
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-emerald-500 mx-auto rounded-full"></div>
           </motion.div>
@@ -163,7 +233,7 @@ export const History = () => {
             <div className="space-y-12">
               {milestones.map((milestone, index) => (
                 <motion.div
-                  key={milestone.year}
+                  key={index}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -80 : 80 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.7, delay: index * 0.1 }}
@@ -171,7 +241,7 @@ export const History = () => {
                   className={`relative flex ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}
                 >
                   {/* Year indicator on timeline */}
-                  <div className=" hidden absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-slate-800 to-slate-900 rounded-full md:flex items-center justify-center shadow-lg border-4 border-white z-10">
+                  <div className="hidden absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-slate-800 to-slate-900 rounded-full md:flex items-center justify-center shadow-lg border-4 border-white z-10">
                     <span className="text-white font-bold text-sm">{String(milestone.year).slice(-2)}</span>
                   </div>
                   
@@ -218,10 +288,12 @@ export const History = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-              Trophy <span className="bg-gradient-to-r from-amber-600 to-yellow-600 bg-clip-text text-transparent">Cabinet</span>
+              {t('history.trophiesSection.title')} <span className="bg-gradient-to-r from-amber-600 to-yellow-600 bg-clip-text text-transparent">
+                {t('history.trophiesSection.highlight')}
+              </span>
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-8">
-              Our collection of honors and achievements
+              {t('history.trophiesSection.description')}
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-yellow-500 mx-auto rounded-full"></div>
           </motion.div>
@@ -235,7 +307,7 @@ export const History = () => {
           >
             {trophies.map((trophy, index) => (
               <motion.div
-                key={trophy.name}
+                key={index}
                 variants={itemVariants}
                 whileHover={{ y: -10, scale: 1.02 }}
                 transition={{ duration: 0.3 }}
@@ -249,11 +321,11 @@ export const History = () => {
                 
                 <div className="space-y-4">
                   <div className="flex items-center justify-between p-4 bg-slate-50 rounded-xl">
-                    <span className="text-slate-600 font-medium">Total Wins</span>
+                    <span className="text-slate-600 font-medium">{t('history.trophies.totalWins')}</span>
                     <span className="text-3xl font-bold text-slate-900">{trophy.count}</span>
                   </div>
                   <div className="flex items-center justify-between p-4 bg-gradient-to-r from-slate-50 to-slate-100 rounded-xl">
-                    <span className="text-slate-600 font-medium">Last Won</span>
+                    <span className="text-slate-600 font-medium">{t('history.trophies.lastWon')}</span>
                     <span className="text-xl font-bold text-slate-900">{trophy.lastWon}</span>
                   </div>
                 </div>
@@ -274,10 +346,12 @@ export const History = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-              Historical <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Moments</span>
+              {t('history.gallerySection.title')} <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                {t('history.gallerySection.highlight')}
+              </span>
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-8">
-              Capturing the essence of our greatest memories
+              {t('history.gallerySection.description')}
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
           </motion.div>
@@ -289,46 +363,9 @@ export const History = () => {
             viewport={{ once: true }}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {[
-              {
-                title: "First Title Win (1937)",
-                image: "First_Title_Win_1937.png",
-                description: "The team celebrating their first league title",
-                gradient: "from-blue-500 to-blue-600"
-              },
-              {
-                title: "Maine Road Era",
-                image: "Maine_Road_Stadium.jpg",
-                description: "The famous Maine Road stadium in its heyday",
-                gradient: "from-emerald-500 to-emerald-600"
-              },
-              {
-                title: "Aguero Moment (2012)",
-                image: "Aguero_Moment.png",
-                description: "The dramatic last-minute title-winning goal",
-                gradient: "from-rose-500 to-rose-600"
-              },
-              {
-                title: "Centenary Celebration",
-                image: "Centenary.png",
-                description: "Celebrating 100 years as Manchester City",
-                gradient: "from-purple-500 to-purple-600"
-              },
-              {
-                title: "Etihad Stadium",
-                image: "Etihad_Stadium.jpg",
-                description: "The modern Etihad Stadium home",
-                gradient: "from-indigo-500 to-indigo-600"
-              },
-              {
-                title: "Treble Winners (2023)",
-                image: "TrebleWinners.webp",
-                description: "Celebrating the historic treble season",
-                gradient: "from-amber-500 to-amber-600"
-              }
-            ].map((item, index) => (
+            {galleryItems.map((item, index) => (
               <motion.div
-                key={item.title}
+                key={index}
                 variants={itemVariants}
                 whileHover={{ y: -10, scale: 1.02 }}
                 transition={{ duration: 0.3 }}
@@ -371,17 +408,19 @@ export const History = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Be Part of Our <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">Legacy</span>
+              {t('history.cta.title')} <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+                {t('history.cta.highlight')}
+              </span>
             </h2>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Join millions of fans worldwide and become part of our continuing story
+              {t('history.cta.description')}
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 bg-gradient-to-r from-blue-500 to-emerald-500 text-white font-bold rounded-full hover:from-blue-600 hover:to-emerald-600 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              Explore More History
+              {t('history.cta.button')}
             </motion.button>
           </motion.div>
         </div>

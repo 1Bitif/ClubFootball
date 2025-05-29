@@ -10,6 +10,7 @@ import { DetailsPlayer } from './components/DetailsPlayer/DetailsPlayer'
 import { ScrollToTop } from './utils/ScrollTop/ScrollTop'
 import { Contact } from './components/Contact/Contact'
 import { Login } from './components/Login/Login'
+import './i18n';
 
 function App() {
 

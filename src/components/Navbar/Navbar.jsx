@@ -2,15 +2,18 @@ import { ChevronDown, User2Icon, Menu, X } from "lucide-react";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 
 export const Navbar = () => {
-  const [lang, setLang] = useState("English");
+  const { t, i18n } = useTranslation();
+  const [lang, setLang] = useState(i18n.language === 'fr' ? 'Français' : 'English');
   const [openLang, setOpenLang] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const handleChangeLang = (e) => {
-    setLang(e.target.value);
+  const handleChangeLang = (selectedLang) => {
+    setLang(selectedLang);
     setOpenLang(false);
+    i18n.changeLanguage(selectedLang === 'Français' ? 'fr' : 'en');
   };
 
   const toggleMobileMenu = () => {
@@ -75,8 +78,8 @@ export const Navbar = () => {
           whileTap={{ scale: 0.98 }}
           className="rounded-full px-2 sm:px-4 bg-gradient-to-l from-[#1b5baf] to-[#98c5e9] py-1 flex items-center cursor-pointer"
         >
-          <p className="text-xs sm:text-sm">Become Culer Premium and enjoy all its advantages</p>
-          <span className="font-bold text-white pl-2 hover:underline text-xs sm:text-sm">I WANT TO BE PREMIUM</span>
+          <p className="text-xs sm:text-sm">{t('navbar.premiumMessage')}</p>
+          <span className="font-bold text-white pl-2 hover:underline text-xs sm:text-sm">{t('navbar.premiumCta')}</span>
         </motion.div>
 
         <NavLink to="login" className="flex items-center gap-4">
@@ -90,7 +93,7 @@ export const Navbar = () => {
             >
               <User2Icon size={18} />
             </motion.span>
-            <p className="hover:underline transition-all duration-200 text-sm">Login</p>
+            <p className="hover:underline transition-all duration-200 text-sm">{t('navbar.login')}</p>
           </motion.div>
         </NavLink>
       </div>
@@ -120,15 +123,15 @@ export const Navbar = () => {
             variants={containerVariants}
             className="hidden lg:flex items-center gap-6"
           >
-            {["Club", "Players", "History", "Contact"].map((item) => (
+            {['club', 'players', 'history', 'contact'].map((item) => (
               <motion.div key={item} variants={itemVariants}>
                 <NavLink
-                  to={`/${item.toLowerCase()}`}
+                  to={`/${item}`}
                   className={({ isActive }) =>
                     `relative px-1 py-2 ${isActive ? "text-[#001838]" : "text-[#001838]/80"}`
                   }
                 >
-                  {item}
+                  {t(`navbar.${item}`)}
                   <motion.div
                     initial={{ width: 0 }}
                     whileHover={{ width: "100%" }}
@@ -147,7 +150,6 @@ export const Navbar = () => {
               className="flex gap-2 text-[#001838] items-center cursor-pointer group"
             >
               <NavLink to="login" className="flex items-center gap-4">
-
                 <motion.span
                   whileHover={{ rotate: 10 }}
                   className="bg-[#154284] p-1 rounded-full text-white group-hover:bg-[#1a5cb3] transition-colors duration-200"
@@ -192,8 +194,7 @@ export const Navbar = () => {
                     <motion.button
                       key={language}
                       whileHover={{ x: 5 }}
-                      value={language}
-                      onClick={handleChangeLang}
+                      onClick={() => handleChangeLang(language)}
                       className="w-full text-left px-4 py-2 hover:bg-gray-100 transition-colors duration-150 text-sm"
                     >
                       {language}
@@ -218,7 +219,7 @@ export const Navbar = () => {
           whileTap={{ scale: 0.9 }}
           onClick={toggleMobileMenu}
           className="lg:hidden p-2 rounded-md hover:bg-[#001838]/10 transition-colors duration-200"
-          aria-label="Toggle mobile menu"
+          aria-label={t('navbar.menuToggle')}
         >
           <AnimatePresence mode="wait">
             {mobileMenuOpen ? (
@@ -259,7 +260,7 @@ export const Navbar = () => {
             <div className="px-4 py-4 space-y-4">
               {/* Mobile Navigation Links */}
               <div className="space-y-2">
-                {["Club", "Players", "History", "Contact"].map((item, index) => (
+                {['club', 'players', 'history', 'contact'].map((item, index) => (
                   <motion.div
                     key={item}
                     variants={mobileItemVariants}
@@ -268,16 +269,17 @@ export const Navbar = () => {
                     transition={{ delay: index * 0.1 }}
                   >
                     <NavLink
-                      to={`/${item.toLowerCase()}`}
+                      to={`/${item}`}
                       onClick={closeMobileMenu}
                       className={({ isActive }) =>
-                        `block px-4 py-3 rounded-lg transition-colors duration-200 ${isActive
-                          ? "bg-[#001838] text-white"
-                          : "text-[#001838] hover:bg-[#001838]/10"
+                        `block px-4 py-3 rounded-lg transition-colors duration-200 ${
+                          isActive
+                            ? "bg-[#001838] text-white"
+                            : "text-[#001838] hover:bg-[#001838]/10"
                         }`
                       }
                     >
-                      {item}
+                      {t(`navbar.${item}`)}
                     </NavLink>
                   </motion.div>
                 ))}
@@ -297,7 +299,7 @@ export const Navbar = () => {
                     className="flex items-center justify-between px-4 py-3 bg-white/50 rounded-lg cursor-pointer"
                     onClick={() => setOpenLang(!openLang)}
                   >
-                    <span className="text-[#001838] font-medium">Language: {lang}</span>
+                    <span className="text-[#001838] font-medium">{t('navbar.language')}: {lang}</span>
                     <motion.div
                       animate={{ rotate: openLang ? 180 : 0 }}
                       transition={{ duration: 0.2 }}
@@ -320,8 +322,7 @@ export const Navbar = () => {
                           <motion.button
                             key={language}
                             whileHover={{ x: 5 }}
-                            value={language}
-                            onClick={handleChangeLang}
+                            onClick={() => handleChangeLang(language)}
                             className="w-full text-left px-4 py-3 hover:bg-gray-100 transition-colors duration-150 text-[#001838]"
                           >
                             {language}
@@ -341,7 +342,7 @@ export const Navbar = () => {
                 transition={{ delay: 0.5 }}
                 className="border-t border-[#001838]/20 pt-4 flex items-center justify-between"
               >
-                <NavLink onClick={closeMobileMenu} to="login" className="flex items-center gap-4">
+                <NavLink to="login" className="flex items-center gap-4">
                   <div className="flex items-center gap-3 text-[#001838]">
                     <motion.span
                       whileHover={{ rotate: 10 }}
@@ -349,7 +350,7 @@ export const Navbar = () => {
                     >
                       <User2Icon size={18} />
                     </motion.span>
-                    <span className="font-medium">Login</span>
+                    <span className="font-medium">{t('navbar.login')}</span>
                   </div>
                 </NavLink>
                 <NavLink to="/" className="hover:opacity-80 transition-opacity duration-200">
@@ -360,6 +361,6 @@ export const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.div >
+    </motion.div>
   );
 };
