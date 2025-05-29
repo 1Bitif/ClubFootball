@@ -1,0 +1,284 @@
+{
+  "navbar": {
+    "premiumMessage": "Become Culer Premium and enjoy all its advantages",
+    "premiumCta": "I WANT TO BE PREMIUM",
+    "login": "Login",
+    "club": "Club",
+    "players": "Players",
+    "history": "History",
+    "contact": "Contact",
+    "menuToggle": "Toggle menu",
+    "language": "Language"
+  },
+  "club": {
+    "hero": {
+      "imageAlt": "Manchester City Treble Winners",
+      "championsBadge": "Premier League Champions",
+      "title": "Manchester City",
+      "description": "A global football powerhouse with unmatched excellence, innovation, and a commitment to beautiful football. Home to world-class talent and a legacy of triumph."
+    },
+    "stats": {
+      "majorTrophies": "Major Trophies",
+      "globalFans": "Global Fans",
+      "established": "Est. Founded",
+      "premierLeague": "Premier League",
+      "stadiumCapacity": "Stadium Capacity"
+    },
+    "honors": {
+      "premierLeague": "Premier League",
+      "championsLeague": "UEFA Champions League",
+      "faCup": "FA Cup",
+      "eflCup": "EFL Cup",
+      "majourCompetition": "Major Competition",
+      "title" : "Titles",
+      "winningYears": "Winning Years"
+    },
+    "achievements": {
+      "consecutiveTitles": "Consecutive Premier League Titles",
+      "domesticTreble": "Domestic Treble Winner",
+      "firstEnglishClub": "First English Club",
+      "recordPoints": "Record Points in Premier League",
+      "uefaRanking": "UEFA Coefficient Ranking",
+      "europeanElite": "European Elite"
+    },
+    "stadium": {
+      "subtitle": "Our Home",
+      "title": "Etihad Stadium",
+      "description": "An architectural masterpiece and our fortress since 2003. The Etihad Stadium represents the pinnacle of modern football venue design, offering an unparalleled matchday experience for over 53,000 passionate supporters.",
+      "seatingCapacity": "Seating Capacity",
+      "yearOpened": "Year Opened",
+      "cost": "Cost (GBP)",
+      "uefaRating": "UEFA Rating"
+    },
+    "sections": {
+      "excellence": {
+        "subtitle": "Excellence in Numbers",
+        "title": "Defining",
+        "highlight": "Excellence",
+        "description": "Our achievements speak volumes about our commitment to excellence and our position among the world's elite football clubs."
+      },
+      "honors": {
+        "subtitle": "Trophy Cabinet",
+        "title": "Champions",
+        "highlight": "Legacy",
+        "description": "A distinguished collection of trophies that represents decades of dedication, skill, and unwavering pursuit of excellence."
+      },
+      "stadium": {
+        "subtitle": "Our Home",
+        "title": "Etihad Stadium",
+        "description": "An architectural masterpiece and our fortress since 2003. The Etihad Stadium represents the pinnacle of modern football venue design, offering an unparalleled matchday experience for over 53,000 passionate supporters."
+      },
+      "cta": {
+        "title": "Join the",
+        "highlight": "City Family",
+        "description": "Become part of a global community that shares the passion for beautiful football, excellence, and the Manchester City legacy. Experience the pride, the victories, and the unforgettable moments together."
+      }
+    },
+    "buttons": {
+      "discoverStory": "Discover Our Story",
+      "watchHighlights": "Watch Highlights",
+      "bookTour": "Book Stadium Tour",
+      "virtualTour": "Virtual Tour",
+      "becomeMember": "Become a Member",
+      "officialStore": "Official Store"
+    }
+  },
+  "players": {
+    "loading": "Loading players...",
+    "loadingSubtext": "Please wait while we retrieve the data",
+    "hero": {
+      "title": "First Team Squad",
+      "subtitle": "Meet the stars of Manchester City Football Club"
+    },
+    "featured": {
+      "title": "Featured Players",
+      "description": "Our key players who make the difference on the pitch"
+    },
+    "squad": {
+      "title": "Full Squad",
+      "description": "Browse through our complete first team roster"
+    },
+    "filters": {
+      "all": "All",
+      "goalkeepers": "Goalkeepers",
+      "defenders": "Defenders",
+      "midfielders": "Midfielders",
+      "forwards": "Forwards"
+    },
+    "stats": {
+      "title": "Squad Statistics",
+      "nationalities": "Nationalities",
+      "ageDistribution": "Age Distribution",
+      "under25": "Under 25",
+      "25to30": "25-30",
+      "over30": "30+",
+      "positionBreakdown": "Position Breakdown"
+    },
+    "positions": {
+      "goalkeeper": "Goalkeepers",
+      "defender": "Defenders",
+      "midfielder": "Midfielders",
+      "forward": "Forwards"
+    },
+    "age": "years",
+    "ageShort": " yrs",
+    "imageAlt": "Photo"
+  },
+   "history": {
+    "hero": {
+      "title": "Club History",
+      "subtitle": "Over 140 years of legacy, triumph, and unwavering passion"
+    },
+    "timeline": {
+      "title": "Historical",
+      "highlight": "Milestones",
+      "description": "Key moments that shaped our incredible journey"
+    },
+    "milestones": {
+      "foundation": {
+        "title": "Club Foundation",
+        "description": "Founded as St. Mark's (West Gorton) by Anna Connell and church wardens."
+      },
+      "nameChange": {
+        "title": "Becomes Manchester City",
+        "description": "The club changes its name to Manchester City Football Club."
+      },
+      "firstTitle": {
+        "title": "First League Title",
+        "description": "Won the First Division title for the first time in club history."
+      },
+      "stadiumMove": {
+        "title": "Move to Etihad Stadium",
+        "description": "Relocated to the City of Manchester Stadium (now Etihad Stadium)."
+      },
+      "ownership": {
+        "title": "New Ownership",
+        "description": "Taken over by Abu Dhabi United Group, marking a new era for the club."
+      },
+      "dramaticWin": {
+        "title": "Dramatic Premier League Win",
+        "description": "Won the Premier League in dramatic fashion with Aguero's last-minute goal."
+      },
+      "treble": {
+        "title": "Treble Winners",
+        "description": "Won Premier League, FA Cup, and Champions League in a historic season."
+      }
+    },
+    "trophiesSection": {
+      "title": "Trophy",
+      "highlight": "Cabinet",
+      "description": "Our collection of honors and achievements"
+    },
+    "trophies": {
+        "totalWins": "Total Wins",
+        "lastWon": "Last Won",
+      "premierLeague": {
+        "name": "Premier League"
+      },
+      "faCup": {
+        "name": "FA Cup"
+      },
+      "leagueCup": {
+        "name": "League Cup"
+      },
+      "championsLeague": {
+        "name": "Champions League"
+      },
+      "cupWinnersCup": {
+        "name": "European Cup Winners' Cup"
+      }
+    },
+    "gallerySection": {
+      "title": "Historical",
+      "highlight": "Moments",
+      "description": "Capturing the essence of our greatest memories"
+    },
+    "gallery": {
+      "firstTitle": {
+        "title": "First Title Win (1937)",
+        "description": "The team celebrating their first league title"
+      },
+      "maineRoad": {
+        "title": "Maine Road Era",
+        "description": "The famous Maine Road stadium in its heyday"
+      },
+      "aguero": {
+        "title": "Aguero Moment (2012)",
+        "description": "The dramatic last-minute title-winning goal"
+      },
+      "centenary": {
+        "title": "Centenary Celebration",
+        "description": "Celebrating 100 years as Manchester City"
+      },
+      "etihad": {
+        "title": "Etihad Stadium",
+        "description": "The modern Etihad Stadium home"
+      },
+      "treble": {
+        "title": "Treble Winners (2023)",
+        "description": "Celebrating the historic treble season"
+      }
+    },
+    "cta": {
+      "title": "Be Part of Our",
+      "highlight": "Legacy",
+      "description": "Join millions of fans worldwide and become part of our continuing story",
+      "button": "Explore More History"
+    }
+  },
+  "contact": {
+    "title": "Contact Manchester City FC",
+    "form": {
+      "title": "Send Us a Message",
+      "fullName": "Full Name",
+      "namePlaceholder": "Your name",
+      "email": "Email Address",
+      "emailPlaceholder": "your.email@example.com",
+      "subject": "Subject",
+      "selectSubject": "Select a subject",
+      "options": {
+        "tickets": "Ticket Information",
+        "membership": "Membership",
+        "media": "Media Inquiry",
+        "other": "Other"
+      },
+      "message": "Your Message",
+      "messagePlaceholder": "Type your message here...",
+      "sendButton": "Send Message"
+    },
+    "info": {
+      "title": "Contact Information",
+      "address": "Address",
+      "addressLine1": "Etihad Stadium",
+      "addressLine2": "Manchester M11 3FF",
+      "addressLine3": "United Kingdom",
+      "phone": "Phone",
+      "phoneMain": "+44 (0)161 444 1894",
+      "phoneTickets": "Ticket Office: +44 (0)161 444 1894",
+      "email": "Email",
+      "emailMain": "info@mancity.com",
+      "emailTickets": "tickets@mancity.com",
+      "connect": "Connect With Us"
+    },
+    "social": {
+      "twitter": "Twitter",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "youtube": "YouTube"
+    }
+  },
+  "login": {
+    "welcome": "Welcome Back",
+    "subtitle": "Sign in to your City account",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "your.email@example.com",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "••••••••",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot password?",
+    "signIn": "Sign in",
+    "orContinueWith": "Or continue with",
+    "newToApp": "New to City?",
+    "createAccount": "Create an account"
+  }
+}
